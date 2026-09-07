@@ -1,0 +1,3050 @@
+{
+  "users": [
+    {
+      "id": "demo-user-id",
+      "name": "Anshi",
+      "email": "anshi@careertrack.ai",
+      "password": "$2a$10$w4r19mEwzHj07uX.0/d9oecmFzH.w4wG8.E4e2r7xM7N5jY7R9pFe",
+      "targetRole": "Frontend Developer",
+      "skillLevel": "Intermediate",
+      "dailyGoalTarget": 4,
+      "reminderTime": "20:00",
+      "notificationPreferences": {
+        "dailyGoalReminder": true,
+        "streakReminder": true,
+        "achievementNotifications": true,
+        "weeklyProgressSummary": true,
+        "browserNotifications": true,
+        "reminderTime": "20:00"
+      },
+      "currentStreak": 12,
+      "longestStreak": 15,
+      "lastLearningDate": "2026-09-07",
+      "readinessScore": 26,
+      "completedTopicsCount": 29,
+      "completedProjectsCount": 2,
+      "onboardingCompleted": true,
+      "createdAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "user-1788785424276-ticmo6",
+      "name": "Ranjani",
+      "email": "ranjani4120@gmail.com",
+      "password": "$2a$10$cxvoawDmvxyvZOg1xCFyP.lUVhzQxQ1UzsAa1vaLJg4SyUGFKMV9e",
+      "targetRole": "Full Stack Developer",
+      "skillLevel": "Beginner",
+      "dailyGoalTarget": 3,
+      "reminderTime": "20:00",
+      "notificationPreferences": {
+        "dailyGoalReminder": true,
+        "streakReminder": true,
+        "achievementNotifications": true,
+        "weeklyProgressSummary": true,
+        "browserNotifications": false,
+        "reminderTime": "20:00"
+      },
+      "currentStreak": 0,
+      "longestStreak": 0,
+      "readinessScore": 0,
+      "completedTopicsCount": 0,
+      "completedProjectsCount": 0,
+      "onboardingCompleted": true,
+      "createdAt": "2026-09-07T12:50:24.276Z"
+    }
+  ],
+  "roadmaps": [
+    {
+      "id": "frontend-developer",
+      "role": "Frontend Developer",
+      "slug": "frontend-developer",
+      "title": "Frontend Developer Roadmap",
+      "description": "Master modern client-side engineering from HTML/CSS/JS fundamentals to React, API integration, and full production deployment.",
+      "icon": "Layout",
+      "estimatedWeeks": 16,
+      "totalTopicsCount": 82,
+      "sections": [
+        {
+          "id": "fe-sec-1",
+          "title": "Section 1 — Web Fundamentals",
+          "description": "Understand how the internet, browsers, and client-server communication work.",
+          "order": 1,
+          "topics": [
+            {
+              "id": "fe-1-1",
+              "title": "How the Web Works",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-1-2",
+              "title": "Client and Server Architecture",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-1-3",
+              "title": "HTTP and HTTPS Protocols",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-1-4",
+              "title": "Browser Basics & Rendering Engine",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-1-5",
+              "title": "Developer Tools & Debugging",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-1-6",
+              "title": "Internet and DNS Basics",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            }
+          ]
+        },
+        {
+          "id": "fe-sec-2",
+          "title": "Section 2 — HTML",
+          "description": "Craft semantic, accessible, and SEO-friendly document structures.",
+          "order": 2,
+          "topics": [
+            {
+              "id": "fe-2-1",
+              "title": "HTML Structure & Doctype",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-2-2",
+              "title": "Semantic HTML5 Elements",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-2-3",
+              "title": "Headings and Paragraphs",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 1
+            },
+            {
+              "id": "fe-2-4",
+              "title": "Links and Images Optimization",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-2-5",
+              "title": "Lists (Ordered, Unordered, Definition)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 1
+            },
+            {
+              "id": "fe-2-6",
+              "title": "Tables & Tabular Data",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-2-7",
+              "title": "Forms and Validation Attributes",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-2-8",
+              "title": "Input Elements & Types",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-2-9",
+              "title": "Audio and Video Media Elements",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-2-10",
+              "title": "HTML Accessibility (ARIA Basics)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-2-11",
+              "title": "SEO Basics & Open Graph Meta Tags",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            }
+          ]
+        },
+        {
+          "id": "fe-sec-3",
+          "title": "Section 3 — CSS",
+          "description": "Design captivating, responsive, and animated user interfaces.",
+          "order": 3,
+          "topics": [
+            {
+              "id": "fe-3-1",
+              "title": "CSS Syntax & Specificity",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-3-2",
+              "title": "CSS Selectors (Combinators, Attributes)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-3-3",
+              "title": "Colors, Typography & Web Fonts",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-3-4",
+              "title": "Box Model (Margin, Border, Padding, Content)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-3-5",
+              "title": "Display Property (block, inline, inline-block)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-3-6",
+              "title": "Positioning (static, relative, absolute, fixed, sticky)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-3-7",
+              "title": "Flexbox Layout System",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-3-8",
+              "title": "CSS Grid Layout System",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-3-9",
+              "title": "Pseudo Classes and Pseudo Elements",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-3-10",
+              "title": "Transitions and Transforms",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-3-11",
+              "title": "Keyframe Animations",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-3-12",
+              "title": "Responsive Design Principles",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-3-13",
+              "title": "Media Queries & Breakpoints",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-3-14",
+              "title": "Mobile-First Design Strategy",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-3-15",
+              "title": "CSS Custom Properties (Variables)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-3-16",
+              "title": "Modern Utility CSS (Tailwind CSS / Bootstrap)",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            }
+          ]
+        },
+        {
+          "id": "fe-sec-4",
+          "title": "Section 4 — JavaScript",
+          "description": "Core logic, data structures, asynchronous programming, and DOM manipulation.",
+          "order": 4,
+          "topics": [
+            {
+              "id": "fe-4-1",
+              "title": "Variables (let, const, var)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-4-2",
+              "title": "Data Types (Primitive vs Reference)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-4-3",
+              "title": "Operators & Type Coercion",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-4-4",
+              "title": "Conditional Statements (if, switch, ternary)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-4-5",
+              "title": "Loops (for, while, for...of, for...in)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-4-6",
+              "title": "Functions (Declarations, Expressions, Arrow)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-4-7",
+              "title": "Scope, Closures & Execution Context",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-4-8",
+              "title": "Arrays and Matrix Operations",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-4-9",
+              "title": "Objects & Prototypal Inheritance",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-4-10",
+              "title": "Array Methods (map, filter, reduce, find, some)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-4-11",
+              "title": "Destructuring Assignment",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-4-12",
+              "title": "Spread and Rest Operators",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-4-13",
+              "title": "DOM Manipulation & Selectors",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-4-14",
+              "title": "Events, Bubbling, Capturing & Delegation",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-4-15",
+              "title": "Client-side Form Validation",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-4-16",
+              "title": "LocalStorage, SessionStorage & Cookies",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-4-17",
+              "title": "JSON Serialization and Parsing",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 1
+            },
+            {
+              "id": "fe-4-18",
+              "title": "Promises and Microtasks",
+              "category": "core",
+              "difficulty": "advanced",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-4-19",
+              "title": "Async / Await Patterns",
+              "category": "core",
+              "difficulty": "advanced",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-4-20",
+              "title": "Fetch API & Request Headers",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-4-21",
+              "title": "Error Handling (try...catch, Custom Errors)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-4-22",
+              "title": "ES6+ Modules, Optional Chaining & Nullish Coalescing",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            }
+          ]
+        },
+        {
+          "id": "fe-sec-5",
+          "title": "Section 5 — Git and GitHub",
+          "description": "Version control workflows, branching strategies, and open-source collaboration.",
+          "order": 5,
+          "topics": [
+            {
+              "id": "fe-5-1",
+              "title": "Git Basics & Configuration",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-5-2",
+              "title": "Repository Creation & Staging",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 1
+            },
+            {
+              "id": "fe-5-3",
+              "title": "Commit Messages & History (git log)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 1
+            },
+            {
+              "id": "fe-5-4",
+              "title": "Branching Strategies (feature branches)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-5-5",
+              "title": "Merging and Conflict Resolution",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-5-6",
+              "title": "Pull Requests & Code Reviews",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-5-7",
+              "title": "GitHub Repository Management & Issues",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-5-8",
+              "title": "Professional README Creation & Documentation",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            }
+          ]
+        },
+        {
+          "id": "fe-sec-6",
+          "title": "Section 6 — React",
+          "description": "Component-driven frontend architecture, lifecycle, hooks, and routing.",
+          "order": 6,
+          "topics": [
+            {
+              "id": "fe-6-1",
+              "title": "React Fundamentals & Virtual DOM",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-6-2",
+              "title": "Functional Components & JSX Syntax",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-6-3",
+              "title": "Props and Component Composition",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-6-4",
+              "title": "Component State & Immutability",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-6-5",
+              "title": "Synthetic Events Handling",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-6-6",
+              "title": "Conditional Rendering Patterns",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-6-7",
+              "title": "Lists, Keys & Reconciliation",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-6-8",
+              "title": "Controlled vs Uncontrolled Forms",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-6-9",
+              "title": "useState Hook Deep Dive",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-6-10",
+              "title": "useEffect Hook & Dependency Arrays",
+              "category": "framework",
+              "difficulty": "advanced",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-6-11",
+              "title": "useContext & Global Prop Drilling Prevention",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-6-12",
+              "title": "Custom Hooks Development",
+              "category": "framework",
+              "difficulty": "advanced",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-6-13",
+              "title": "React Router / App Router Navigation",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-6-14",
+              "title": "Component Architecture & Atomic Design",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-6-15",
+              "title": "Global State Management (Zustand / Redux Toolkit)",
+              "category": "framework",
+              "difficulty": "advanced",
+              "estimatedHours": 5
+            }
+          ]
+        },
+        {
+          "id": "fe-sec-7",
+          "title": "Section 7 — Frontend and Backend Integration",
+          "description": "Connect client applications with RESTful services, manage async states, and auth tokens.",
+          "order": 7,
+          "topics": [
+            {
+              "id": "fe-7-1",
+              "title": "Understanding APIs and Web Services",
+              "category": "integration",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-7-2",
+              "title": "REST API Principles & Status Codes",
+              "category": "integration",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-7-3",
+              "title": "HTTP Methods (GET, POST, PUT, PATCH, DELETE)",
+              "category": "integration",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-7-4",
+              "title": "Handling JSON Payloads",
+              "category": "integration",
+              "difficulty": "beginner",
+              "estimatedHours": 1
+            },
+            {
+              "id": "fe-7-5",
+              "title": "Fetch API vs Axios Client",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-7-6",
+              "title": "Connecting React with Backend Endpoints",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-7-7",
+              "title": "Sending Form Data & File Uploads to Backend",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-7-8",
+              "title": "Receiving & Parsing API Responses",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-7-9",
+              "title": "Authentication Integration & Bearer Tokens",
+              "category": "integration",
+              "difficulty": "advanced",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-7-10",
+              "title": "JWT Basics, Expiration & Secure Storage",
+              "category": "integration",
+              "difficulty": "advanced",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-7-11",
+              "title": "Handling API Errors, Retries & Fallbacks",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-7-12",
+              "title": "Loading States, Skeletons & Optimistic UI",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-7-13",
+              "title": "Environment Variables & API Base URLs",
+              "category": "integration",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            }
+          ]
+        },
+        {
+          "id": "fe-sec-8",
+          "title": "Section 8 — Projects",
+          "description": "Build end-to-end portfolio projects demonstrating industry-grade proficiency.",
+          "order": 8,
+          "topics": [
+            {
+              "id": "fe-8-1",
+              "title": "Responsive Modern Landing Page",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "beginner",
+              "estimatedHours": 8
+            },
+            {
+              "id": "fe-8-2",
+              "title": "Interactive Product Catalog with Filters",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 10
+            },
+            {
+              "id": "fe-8-3",
+              "title": "Analytics Dashboard with Charts & Dark Mode",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 12
+            },
+            {
+              "id": "fe-8-4",
+              "title": "API-Based Live Weather / Movie Search App",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 10
+            },
+            {
+              "id": "fe-8-5",
+              "title": "Authentication & Profile Management App",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 14
+            },
+            {
+              "id": "fe-8-6",
+              "title": "Full Frontend Capstone Project (SaaS / E-commerce)",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 20
+            },
+            {
+              "id": "fe-8-7",
+              "title": "Personal Developer Portfolio Website",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 10
+            }
+          ]
+        },
+        {
+          "id": "fe-sec-9",
+          "title": "Section 9 — Deployment",
+          "description": "Ship optimized frontend builds to production hosting with CI/CD.",
+          "order": 9,
+          "topics": [
+            {
+              "id": "fe-9-1",
+              "title": "Production Bundling & Minification",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-9-2",
+              "title": "Production Environment Variables Configuration",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-9-3",
+              "title": "Deploy Frontend to Vercel / Netlify",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-9-4",
+              "title": "Connect Production API & Handle CORS",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fe-9-5",
+              "title": "Custom Domain & SSL/TLS Configuration",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fe-9-6",
+              "title": "Basic Deployment Debugging & Logging",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            }
+          ]
+        },
+        {
+          "id": "fe-sec-10",
+          "title": "Section 10 — Interview Preparation",
+          "description": "Master technical questions, live coding tasks, and placement interview rounds.",
+          "order": 10,
+          "topics": [
+            {
+              "id": "fe-10-1",
+              "title": "HTML & Semantic Web Interview Questions",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-10-2",
+              "title": "CSS Specificity & Flexbox/Grid Interview Questions",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "fe-10-3",
+              "title": "JavaScript Tricky Closures, Hoisting & Event Loop Questions",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "advanced",
+              "estimatedHours": 8
+            },
+            {
+              "id": "fe-10-4",
+              "title": "React Hooks Lifecycle & State Batching Questions",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "advanced",
+              "estimatedHours": 8
+            },
+            {
+              "id": "fe-10-5",
+              "title": "Web Performance & Core Web Vitals Fundamentals",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fe-10-6",
+              "title": "Basic DSA for Frontend (Strings, Arrays, Two-Pointer)",
+              "category": "dsa",
+              "isInterviewQuestion": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 12
+            },
+            {
+              "id": "fe-10-7",
+              "title": "Frontend Machine Coding (Accordion, Autocomplete, Infinite Scroll)",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "advanced",
+              "estimatedHours": 10
+            },
+            {
+              "id": "fe-10-8",
+              "title": "Project Explanation Preparation & STAR Framework",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "fe-10-9",
+              "title": "Behavioral & HR Interview Preparation",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backend-developer",
+      "role": "Backend Developer",
+      "slug": "backend-developer",
+      "title": "Backend Developer Roadmap",
+      "description": "Build high-performance REST APIs, database architectures, microservices, authentication systems, and cloud deployments.",
+      "icon": "Server",
+      "estimatedWeeks": 18,
+      "totalTopicsCount": 42,
+      "sections": [
+        {
+          "id": "be-sec-1",
+          "title": "Section 1 — Programming Fundamentals",
+          "description": "Master core language syntax, object-oriented concepts, and memory principles.",
+          "order": 1,
+          "topics": [
+            {
+              "id": "be-1-1",
+              "title": "Programming Basics & Types",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "be-1-2",
+              "title": "Conditions & Control Flow",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "be-1-3",
+              "title": "Loops & Iterators",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "be-1-4",
+              "title": "Functions & Scope",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "be-1-5",
+              "title": "Object-Oriented Programming (OOP)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "be-1-6",
+              "title": "Exception Handling Patterns",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "be-1-7",
+              "title": "File Handling & Streams",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            }
+          ]
+        },
+        {
+          "id": "be-sec-2",
+          "title": "Section 2 — Data Structures and Algorithms",
+          "description": "Algorithmic thinking, complexity analysis, and problem-solving.",
+          "order": 2,
+          "topics": [
+            {
+              "id": "be-2-1",
+              "title": "Arrays & String Manipulation",
+              "category": "dsa",
+              "difficulty": "beginner",
+              "estimatedHours": 6
+            },
+            {
+              "id": "be-2-2",
+              "title": "Linked Lists (Singly & Doubly)",
+              "category": "dsa",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "be-2-3",
+              "title": "Stacks & Queues",
+              "category": "dsa",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "be-2-4",
+              "title": "Hashing & HashMaps",
+              "category": "dsa",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "be-2-5",
+              "title": "Binary Trees & BSTs",
+              "category": "dsa",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            },
+            {
+              "id": "be-2-6",
+              "title": "Graphs (BFS & DFS)",
+              "category": "dsa",
+              "difficulty": "advanced",
+              "estimatedHours": 10
+            },
+            {
+              "id": "be-2-7",
+              "title": "Sorting & Searching Algorithms",
+              "category": "dsa",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "be-2-8",
+              "title": "Recursion & Backtracking",
+              "category": "dsa",
+              "difficulty": "advanced",
+              "estimatedHours": 8
+            },
+            {
+              "id": "be-2-9",
+              "title": "Time & Space Complexity (Big-O)",
+              "category": "dsa",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            }
+          ]
+        },
+        {
+          "id": "be-sec-3",
+          "title": "Section 3 — Backend Fundamentals",
+          "description": "HTTP protocol, REST architecture, request-response lifecycles, and middlewares.",
+          "order": 3,
+          "topics": [
+            {
+              "id": "be-3-1",
+              "title": "Client-Server Architecture",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "be-3-2",
+              "title": "HTTP Methods, Headers & Status Codes",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "be-3-3",
+              "title": "REST API Design Best Practices",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "be-3-4",
+              "title": "Request/Response Lifecycle",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "be-3-5",
+              "title": "Middleware Architecture",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "be-3-6",
+              "title": "Authentication vs Authorization",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "be-3-7",
+              "title": "Global Error Handling Middleware",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            }
+          ]
+        },
+        {
+          "id": "be-sec-4",
+          "title": "Section 4 — Node.js & Express Framework",
+          "description": "Server development with Node runtime and Express ecosystem.",
+          "order": 4,
+          "topics": [
+            {
+              "id": "be-4-1",
+              "title": "Node.js Runtime & Event Loop",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "be-4-2",
+              "title": "npm Packages & Dependency Management",
+              "category": "framework",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "be-4-3",
+              "title": "Express.js Application Setup",
+              "category": "framework",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "be-4-4",
+              "title": "Modular Routing & Controllers",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "be-4-5",
+              "title": "Request Payload Validation (Zod / Joi)",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            }
+          ]
+        },
+        {
+          "id": "be-sec-5",
+          "title": "Section 5 — Databases (SQL & NoSQL)",
+          "description": "Relational and document storage, schema design, queries, and ORM/ODM.",
+          "order": 5,
+          "topics": [
+            {
+              "id": "be-5-1",
+              "title": "SQL Fundamentals & Data Types",
+              "category": "database",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "be-5-2",
+              "title": "CRUD Operations & Aggregate Queries",
+              "category": "database",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "be-5-3",
+              "title": "Table Joins (Inner, Left, Right, Full)",
+              "category": "database",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "be-5-4",
+              "title": "Database Indexing & Query Optimization",
+              "category": "database",
+              "difficulty": "advanced",
+              "estimatedHours": 4
+            },
+            {
+              "id": "be-5-5",
+              "title": "MongoDB Basics & Document Model",
+              "category": "database",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "be-5-6",
+              "title": "Mongoose ODM Schemas & Relationships",
+              "category": "database",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            }
+          ]
+        },
+        {
+          "id": "be-sec-6",
+          "title": "Section 6 — Security & Auth",
+          "description": "Securing web applications against top vulnerabilities.",
+          "order": 6,
+          "topics": [
+            {
+              "id": "be-6-1",
+              "title": "Password Hashing (bcrypt / argon2)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "be-6-2",
+              "title": "JWT Token Generation & Refresh Flow",
+              "category": "core",
+              "difficulty": "advanced",
+              "estimatedHours": 4
+            },
+            {
+              "id": "be-6-3",
+              "title": "CORS, Helmet & HTTP Security Headers",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            },
+            {
+              "id": "be-6-4",
+              "title": "Rate Limiting & DDOS Mitigation",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            }
+          ]
+        },
+        {
+          "id": "be-sec-7",
+          "title": "Section 7 — Backend Projects & Deployment",
+          "description": "Complete production-grade server projects and deployment.",
+          "order": 7,
+          "topics": [
+            {
+              "id": "be-7-1",
+              "title": "CRUD REST API with MongoDB/PostgreSQL",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 10
+            },
+            {
+              "id": "be-7-2",
+              "title": "Authentication Microservice (JWT, Roles, Cookies)",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 12
+            },
+            {
+              "id": "be-7-3",
+              "title": "E-commerce / Banking Transaction Backend",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 16
+            },
+            {
+              "id": "be-7-4",
+              "title": "Production Server Deployment & Process Management (PM2/Docker)",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-stack-developer",
+      "role": "Full Stack Developer",
+      "slug": "full-stack-developer",
+      "title": "Full Stack Developer Roadmap",
+      "description": "End-to-end full stack architecture divided into distinct structured learning stages.",
+      "icon": "Layers",
+      "estimatedWeeks": 22,
+      "totalTopicsCount": 36,
+      "sections": [
+        {
+          "id": "fs-stage-1",
+          "title": "Stage 1 — Frontend Foundation",
+          "description": "Core web UI development.",
+          "order": 1,
+          "topics": [
+            {
+              "id": "fs-1-1",
+              "title": "HTML5 Semantic Structure",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fs-1-2",
+              "title": "CSS3, Flexbox & Grid",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 6
+            },
+            {
+              "id": "fs-1-3",
+              "title": "JavaScript ES6+ Core Logic",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            },
+            {
+              "id": "fs-1-4",
+              "title": "Responsive Mobile-First UI",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fs-1-5",
+              "title": "Git & GitHub Collaboration",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            }
+          ]
+        },
+        {
+          "id": "fs-stage-2",
+          "title": "Stage 2 — Frontend Framework (React)",
+          "description": "Modern component libraries and reactive UI.",
+          "order": 2,
+          "topics": [
+            {
+              "id": "fs-2-1",
+              "title": "React Components & JSX",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fs-2-2",
+              "title": "Props and Component State",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fs-2-3",
+              "title": "React Hooks (useState, useEffect, useContext)",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "fs-2-4",
+              "title": "Client Routing & Navigation",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fs-2-5",
+              "title": "Global State Management",
+              "category": "framework",
+              "difficulty": "advanced",
+              "estimatedHours": 5
+            }
+          ]
+        },
+        {
+          "id": "fs-stage-3",
+          "title": "Stage 3 — Backend Foundation",
+          "description": "Server-side runtimes and REST API endpoints.",
+          "order": 3,
+          "topics": [
+            {
+              "id": "fs-3-1",
+              "title": "Node.js & npm Ecosystem",
+              "category": "framework",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fs-3-2",
+              "title": "Express.js Web Server",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fs-3-3",
+              "title": "RESTful API Architecture",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fs-3-4",
+              "title": "Middleware & Request Pipelines",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fs-3-5",
+              "title": "JWT Authentication & Security",
+              "category": "core",
+              "difficulty": "advanced",
+              "estimatedHours": 5
+            },
+            {
+              "id": "fs-3-6",
+              "title": "Backend Error Handling",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            }
+          ]
+        },
+        {
+          "id": "fs-stage-4",
+          "title": "Stage 4 — Database",
+          "description": "Schema modeling, queries, and indexing.",
+          "order": 4,
+          "topics": [
+            {
+              "id": "fs-4-1",
+              "title": "SQL Relational Databases (PostgreSQL / MySQL)",
+              "category": "database",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "fs-4-2",
+              "title": "MongoDB Document Database & Mongoose",
+              "category": "database",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "fs-4-3",
+              "title": "Database Schema Design & Relationships",
+              "category": "database",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fs-4-4",
+              "title": "CRUD Database Operations",
+              "category": "database",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            }
+          ]
+        },
+        {
+          "id": "fs-stage-5",
+          "title": "Stage 5 — Frontend + Backend Integration",
+          "description": "Full stack data flow and communication.",
+          "order": 5,
+          "topics": [
+            {
+              "id": "fs-5-1",
+              "title": "REST API Consumption in React",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fs-5-2",
+              "title": "Full Stack Authentication Flow with Cookies",
+              "category": "integration",
+              "difficulty": "advanced",
+              "estimatedHours": 5
+            },
+            {
+              "id": "fs-5-3",
+              "title": "Form Submissions & File Upload Handlers",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fs-5-4",
+              "title": "Full Stack Error Handling & Toast Feedback",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "fs-5-5",
+              "title": "Loading States & Optimistic Caching",
+              "category": "integration",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            }
+          ]
+        },
+        {
+          "id": "fs-stage-6",
+          "title": "Stage 6 — Full Stack Projects",
+          "description": "Real-world capstones connecting client, server, and database.",
+          "order": 6,
+          "topics": [
+            {
+              "id": "fs-6-1",
+              "title": "Full Stack Auth Application",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 12
+            },
+            {
+              "id": "fs-6-2",
+              "title": "Collaborative Task Management Dashboard",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 14
+            },
+            {
+              "id": "fs-6-3",
+              "title": "Complete E-Commerce / SaaS Platform with Stripe",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 24
+            }
+          ]
+        },
+        {
+          "id": "fs-stage-7",
+          "title": "Stage 7 — Deployment",
+          "description": "Continuous integration and multi-tier production deployment.",
+          "order": 7,
+          "topics": [
+            {
+              "id": "fs-7-1",
+              "title": "Frontend Deployment (Vercel)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 2
+            },
+            {
+              "id": "fs-7-2",
+              "title": "Backend & Database Deployment (Render / MongoDB Atlas)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "fs-7-3",
+              "title": "Production Environment Variables & Secrets",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-analyst",
+      "role": "Data Analyst",
+      "slug": "data-analyst",
+      "title": "Data Analyst Roadmap",
+      "description": "Transform raw data into business intelligence using SQL, Python, Excel, Power BI, and interactive dashboards.",
+      "icon": "BarChart3",
+      "estimatedWeeks": 14,
+      "totalTopicsCount": 26,
+      "sections": [
+        {
+          "id": "da-sec-1",
+          "title": "Section 1 — Foundations & Excel",
+          "description": "Spreadsheet mastery and exploratory statistics.",
+          "order": 1,
+          "topics": [
+            {
+              "id": "da-1-1",
+              "title": "Excel Fundamentals (Formulas, Pivot Tables, VLOOKUP/XLOOKUP)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 6
+            },
+            {
+              "id": "da-1-2",
+              "title": "Advanced Excel Data Cleaning & Power Query",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "da-1-3",
+              "title": "Descriptive Statistics (Mean, Median, Standard Deviation)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            }
+          ]
+        },
+        {
+          "id": "da-sec-2",
+          "title": "Section 2 — SQL for Analytics",
+          "description": "Relational queries, aggregations, window functions, and joins.",
+          "order": 2,
+          "topics": [
+            {
+              "id": "da-2-1",
+              "title": "SQL Basics (SELECT, WHERE, ORDER BY)",
+              "category": "database",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "da-2-2",
+              "title": "Grouping & Aggregations (GROUP BY, HAVING)",
+              "category": "database",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "da-2-3",
+              "title": "Complex Joins (INNER, LEFT, SELF)",
+              "category": "database",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "da-2-4",
+              "title": "Subqueries & Common Table Expressions (CTEs)",
+              "category": "database",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "da-2-5",
+              "title": "Window Functions (RANK, DENSE_RANK, LEAD, LAG)",
+              "category": "database",
+              "difficulty": "advanced",
+              "estimatedHours": 6
+            }
+          ]
+        },
+        {
+          "id": "da-sec-3",
+          "title": "Section 3 — Python for Data Analysis",
+          "description": "Programmatic data cleaning, manipulation, and statistical transformations.",
+          "order": 3,
+          "topics": [
+            {
+              "id": "da-3-1",
+              "title": "Python Syntax & Data Structures",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "da-3-2",
+              "title": "NumPy Arrays and Numerical Operations",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "da-3-3",
+              "title": "Pandas DataFrames & Data Cleaning",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            },
+            {
+              "id": "da-3-4",
+              "title": "Handling Missing Values & Outliers",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            }
+          ]
+        },
+        {
+          "id": "da-sec-4",
+          "title": "Section 4 — Data Visualization & BI Tools",
+          "description": "Building impactful executive dashboards.",
+          "order": 4,
+          "topics": [
+            {
+              "id": "da-4-1",
+              "title": "Chart Selection & Storytelling with Data",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "da-4-2",
+              "title": "Matplotlib & Seaborn in Python",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "da-4-3",
+              "title": "Power BI Dashboard Development (DAX Basics)",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            },
+            {
+              "id": "da-4-4",
+              "title": "Tableau Interactive Dashboards",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            }
+          ]
+        },
+        {
+          "id": "da-sec-5",
+          "title": "Section 5 — Projects & Interview Prep",
+          "description": "Business case studies and placement questions.",
+          "order": 5,
+          "topics": [
+            {
+              "id": "da-5-1",
+              "title": "E-Commerce Sales Performance Analysis Project",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 10
+            },
+            {
+              "id": "da-5-2",
+              "title": "Customer Churn & Cohort Analysis Project",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 12
+            },
+            {
+              "id": "da-5-3",
+              "title": "End-to-End Business Intelligence Dashboard",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 14
+            },
+            {
+              "id": "da-5-4",
+              "title": "SQL & Data Case Studies Interview Prep",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-scientist",
+      "role": "Data Scientist",
+      "slug": "data-scientist",
+      "title": "Data Scientist Roadmap",
+      "description": "Master math, statistical modeling, machine learning algorithms, deep learning basics, and production ML pipelines.",
+      "icon": "BrainCircuit",
+      "estimatedWeeks": 20,
+      "totalTopicsCount": 22,
+      "sections": [
+        {
+          "id": "ds-sec-1",
+          "title": "Section 1 — Math, Statistics & Python",
+          "description": "Mathematical foundations of machine learning.",
+          "order": 1,
+          "topics": [
+            {
+              "id": "ds-1-1",
+              "title": "Python for Scientific Computing",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 5
+            },
+            {
+              "id": "ds-1-2",
+              "title": "NumPy & Pandas for Data Manipulation",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "ds-1-3",
+              "title": "Probability & Inferential Statistics",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            },
+            {
+              "id": "ds-1-4",
+              "title": "Linear Algebra & Matrix Calculus",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            }
+          ]
+        },
+        {
+          "id": "ds-sec-2",
+          "title": "Section 2 — EDA & Feature Engineering",
+          "description": "Data preprocessing, feature selection, and transformation.",
+          "order": 2,
+          "topics": [
+            {
+              "id": "ds-2-1",
+              "title": "Exploratory Data Analysis (EDA)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "ds-2-2",
+              "title": "Feature Scaling, One-Hot Encoding & Pipelines",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "ds-2-3",
+              "title": "Handling Imbalanced Datasets (SMOTE)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            }
+          ]
+        },
+        {
+          "id": "ds-sec-3",
+          "title": "Section 3 — Machine Learning Algorithms",
+          "description": "Supervised, unsupervised, and ensemble modeling.",
+          "order": 3,
+          "topics": [
+            {
+              "id": "ds-3-1",
+              "title": "Linear & Logistic Regression",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "ds-3-2",
+              "title": "Decision Trees & Random Forests",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "ds-3-3",
+              "title": "Gradient Boosting (XGBoost / LightGBM)",
+              "category": "core",
+              "difficulty": "advanced",
+              "estimatedHours": 8
+            },
+            {
+              "id": "ds-3-4",
+              "title": "Clustering (K-Means, Hierarchical)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "ds-3-5",
+              "title": "Model Evaluation Metrics (ROC-AUC, Precision-Recall, F1)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "ds-3-6",
+              "title": "Scikit-Learn Workflows",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            }
+          ]
+        },
+        {
+          "id": "ds-sec-4",
+          "title": "Section 4 — Deep Learning & Deployment",
+          "description": "Neural networks, PyTorch/TensorFlow, and serving models.",
+          "order": 4,
+          "topics": [
+            {
+              "id": "ds-4-1",
+              "title": "Neural Networks Basics (MLP, Backpropagation)",
+              "category": "core",
+              "difficulty": "advanced",
+              "estimatedHours": 8
+            },
+            {
+              "id": "ds-4-2",
+              "title": "End-to-End Predictive Machine Learning Project",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 16
+            },
+            {
+              "id": "ds-4-3",
+              "title": "Model Deployment with FastAPI / Flask & Docker",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 10
+            },
+            {
+              "id": "ds-4-4",
+              "title": "Data Science & ML Placement Interview Prep",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "advanced",
+              "estimatedHours": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devops-engineer",
+      "role": "DevOps Engineer",
+      "slug": "devops-engineer",
+      "title": "DevOps Engineer Roadmap",
+      "description": "Infrastructure automation, Linux, containers, orchestration, CI/CD pipelines, and cloud engineering.",
+      "icon": "Cpu",
+      "estimatedWeeks": 18,
+      "totalTopicsCount": 20,
+      "sections": [
+        {
+          "id": "do-sec-1",
+          "title": "Section 1 — Linux & Networking",
+          "description": "Systems administration and network fundamentals.",
+          "order": 1,
+          "topics": [
+            {
+              "id": "do-1-1",
+              "title": "Linux Operating System Architecture",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "do-1-2",
+              "title": "Essential Linux CLI Commands & Permissions",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 6
+            },
+            {
+              "id": "do-1-3",
+              "title": "Networking Fundamentals (TCP/IP, DNS, SSH, Ports)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "do-1-4",
+              "title": "Bash Shell Scripting & Automation",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            }
+          ]
+        },
+        {
+          "id": "do-sec-2",
+          "title": "Section 2 — Containers & Docker",
+          "description": "Containerizing applications for consistent environments.",
+          "order": 2,
+          "topics": [
+            {
+              "id": "do-2-1",
+              "title": "Docker Concepts & Containerization vs Virtualization",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "do-2-2",
+              "title": "Writing Optimized Dockerfiles",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "do-2-3",
+              "title": "Docker Compose Multi-Container Orchestration",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            }
+          ]
+        },
+        {
+          "id": "do-sec-3",
+          "title": "Section 3 — CI/CD & Automation",
+          "description": "Automated testing, building, and deployment pipelines.",
+          "order": 3,
+          "topics": [
+            {
+              "id": "do-3-1",
+              "title": "Continuous Integration & Delivery (CI/CD) Principles",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "do-3-2",
+              "title": "GitHub Actions Pipeline Automation",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            }
+          ]
+        },
+        {
+          "id": "do-sec-4",
+          "title": "Section 4 — Cloud, Kubernetes & Monitoring",
+          "description": "Cloud deployment, container orchestration, and telemetry.",
+          "order": 4,
+          "topics": [
+            {
+              "id": "do-4-1",
+              "title": "Cloud Fundamentals (AWS / Azure / GCP)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            },
+            {
+              "id": "do-4-2",
+              "title": "Kubernetes Architecture (Pods, Services, Ingress)",
+              "category": "framework",
+              "difficulty": "advanced",
+              "estimatedHours": 12
+            },
+            {
+              "id": "do-4-3",
+              "title": "Monitoring & Logging (Prometheus, Grafana, ELK)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "do-4-4",
+              "title": "End-to-End Automated DevOps CI/CD Deployment Project",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 16
+            },
+            {
+              "id": "do-4-5",
+              "title": "DevOps & SRE Interview Preparation",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "advanced",
+              "estimatedHours": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "java-developer",
+      "role": "Java Developer",
+      "slug": "java-developer",
+      "title": "Java Developer Roadmap",
+      "description": "Enterprise Java, OOP principles, Collections, Multithreading, Spring Boot, microservices, and databases.",
+      "icon": "Coffee",
+      "estimatedWeeks": 18,
+      "totalTopicsCount": 26,
+      "sections": [
+        {
+          "id": "java-sec-1",
+          "title": "Section 1 — Java Core & OOP",
+          "description": "Deep dive into language syntax and object design.",
+          "order": 1,
+          "topics": [
+            {
+              "id": "java-1-1",
+              "title": "Java Fundamentals, JVM, JRE & JDK",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "java-1-2",
+              "title": "Variables, Data Types & Operators",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            },
+            {
+              "id": "java-1-3",
+              "title": "OOP Principles (Encapsulation, Inheritance, Polymorphism, Abstraction)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "java-1-4",
+              "title": "Interfaces & Abstract Classes",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "java-1-5",
+              "title": "Exception Handling (Try-Catch-Finally, Custom Exceptions)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            }
+          ]
+        },
+        {
+          "id": "java-sec-2",
+          "title": "Section 2 — Advanced Java & Collections",
+          "description": "Collections framework, streams, and concurrency.",
+          "order": 2,
+          "topics": [
+            {
+              "id": "java-2-1",
+              "title": "Java Collections Framework (List, Set, Map)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "java-2-2",
+              "title": "Generics in Java",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 3
+            },
+            {
+              "id": "java-2-3",
+              "title": "Java 8+ Streams API & Lambda Expressions",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "java-2-4",
+              "title": "Multithreading & Concurrency",
+              "category": "core",
+              "difficulty": "advanced",
+              "estimatedHours": 8
+            }
+          ]
+        },
+        {
+          "id": "java-sec-3",
+          "title": "Section 3 — Spring Boot & Databases",
+          "description": "Modern enterprise backend development.",
+          "order": 3,
+          "topics": [
+            {
+              "id": "java-3-1",
+              "title": "SQL & JDBC Database Connectivity",
+              "category": "database",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "java-3-2",
+              "title": "Spring Framework Core & Dependency Injection",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "java-3-3",
+              "title": "Spring Boot RESTful API Development",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            },
+            {
+              "id": "java-3-4",
+              "title": "Spring Data JPA & Hibernate ORM",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "java-3-5",
+              "title": "Spring Security & JWT Authentication",
+              "category": "framework",
+              "difficulty": "advanced",
+              "estimatedHours": 6
+            }
+          ]
+        },
+        {
+          "id": "java-sec-4",
+          "title": "Section 4 — Projects & Interview Prep",
+          "description": "Full stack enterprise projects and placement questions.",
+          "order": 4,
+          "topics": [
+            {
+              "id": "java-4-1",
+              "title": "Enterprise Banking / Management REST API Project",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 16
+            },
+            {
+              "id": "java-4-2",
+              "title": "Java DSA & Placement Coding Interview Prep",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "python-developer",
+      "role": "Python Developer",
+      "slug": "python-developer",
+      "title": "Python Developer Roadmap",
+      "description": "Pythonic coding, OOP, web frameworks (FastAPI / Django / Flask), APIs, database integration, and deployment.",
+      "icon": "Terminal",
+      "estimatedWeeks": 16,
+      "totalTopicsCount": 22,
+      "sections": [
+        {
+          "id": "py-sec-1",
+          "title": "Section 1 — Python Fundamentals",
+          "description": "Core language mastery and idiomatic code.",
+          "order": 1,
+          "topics": [
+            {
+              "id": "py-1-1",
+              "title": "Python Basics, Data Types & Collections (Lists, Dicts, Sets)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 4
+            },
+            {
+              "id": "py-1-2",
+              "title": "Functions, *args, **kwargs & Decorators",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "py-1-3",
+              "title": "Object-Oriented Programming (OOP) in Python",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "py-1-4",
+              "title": "Exception Handling & Context Managers (with)",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            },
+            {
+              "id": "py-1-5",
+              "title": "File I/O, JSON & Virtual Environments (venv)",
+              "category": "core",
+              "difficulty": "beginner",
+              "estimatedHours": 3
+            }
+          ]
+        },
+        {
+          "id": "py-sec-2",
+          "title": "Section 2 — Web Frameworks & Databases",
+          "description": "FastAPI, Django, SQLAlchemy, and REST APIs.",
+          "order": 2,
+          "topics": [
+            {
+              "id": "py-2-1",
+              "title": "SQL & Database Design (PostgreSQL / SQLite)",
+              "category": "database",
+              "difficulty": "intermediate",
+              "estimatedHours": 5
+            },
+            {
+              "id": "py-2-2",
+              "title": "FastAPI / Flask Framework & Async Endpoints",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 8
+            },
+            {
+              "id": "py-2-3",
+              "title": "SQLAlchemy / Peewee ORM Integration",
+              "category": "framework",
+              "difficulty": "intermediate",
+              "estimatedHours": 6
+            },
+            {
+              "id": "py-2-4",
+              "title": "JWT Authentication & Security Best Practices",
+              "category": "core",
+              "difficulty": "advanced",
+              "estimatedHours": 5
+            },
+            {
+              "id": "py-2-5",
+              "title": "Automated Testing with pytest",
+              "category": "core",
+              "difficulty": "intermediate",
+              "estimatedHours": 4
+            }
+          ]
+        },
+        {
+          "id": "py-sec-3",
+          "title": "Section 3 — Projects & Placement Prep",
+          "description": "Production web projects and interview mastery.",
+          "order": 3,
+          "topics": [
+            {
+              "id": "py-3-1",
+              "title": "Scalable REST API Backend with FastAPI & Docker",
+              "category": "project",
+              "isProject": true,
+              "difficulty": "advanced",
+              "estimatedHours": 14
+            },
+            {
+              "id": "py-3-2",
+              "title": "Python DSA & Technical Placement Interview Prep",
+              "category": "interview",
+              "isInterviewQuestion": true,
+              "difficulty": "intermediate",
+              "estimatedHours": 10
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "progress": [
+    {
+      "id": "p-1",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-1-1",
+      "sectionId": "fe-sec-1",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-2",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-1-2",
+      "sectionId": "fe-sec-1",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-3",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-1-3",
+      "sectionId": "fe-sec-1",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-4",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-1-4",
+      "sectionId": "fe-sec-1",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-5",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-1-5",
+      "sectionId": "fe-sec-1",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-6",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-1-6",
+      "sectionId": "fe-sec-1",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-7",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-2-1",
+      "sectionId": "fe-sec-2",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-8",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-2-2",
+      "sectionId": "fe-sec-2",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-9",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-2-3",
+      "sectionId": "fe-sec-2",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-10",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-2-4",
+      "sectionId": "fe-sec-2",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-11",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-2-5",
+      "sectionId": "fe-sec-2",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-12",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-2-6",
+      "sectionId": "fe-sec-2",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-13",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-2-7",
+      "sectionId": "fe-sec-2",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-14",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-3-1",
+      "sectionId": "fe-sec-3",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-15",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-3-2",
+      "sectionId": "fe-sec-3",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-16",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-3-4",
+      "sectionId": "fe-sec-3",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-17",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-3-7",
+      "sectionId": "fe-sec-3",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-18",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-4-1",
+      "sectionId": "fe-sec-4",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-19",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-4-2",
+      "sectionId": "fe-sec-4",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-20",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-4-6",
+      "sectionId": "fe-sec-4",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-21",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-4-8",
+      "sectionId": "fe-sec-4",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-22",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-4-10",
+      "sectionId": "fe-sec-4",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-23",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-5-1",
+      "sectionId": "fe-sec-5",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-24",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-5-2",
+      "sectionId": "fe-sec-5",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-25",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-6-1",
+      "sectionId": "fe-sec-6",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-26",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-6-2",
+      "sectionId": "fe-sec-6",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-27",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-8-1",
+      "sectionId": "fe-sec-8",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-28",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-8-2",
+      "sectionId": "fe-sec-8",
+      "completed": true,
+      "completedAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "p-1788781058690-3o3a",
+      "userId": "demo-user-id",
+      "role": "Frontend Developer",
+      "topicId": "fe-2-8",
+      "sectionId": "fe-sec-2",
+      "completed": true,
+      "completedAt": "2026-09-07T11:37:38.690Z"
+    }
+  ],
+  "dailyGoals": [
+    {
+      "id": "dg-demo",
+      "userId": "demo-user-id",
+      "date": "2026-09-07",
+      "tasks": [
+        {
+          "id": "t-1",
+          "topicId": "fe-4-6",
+          "sectionId": "fe-sec-4",
+          "title": "JavaScript — Functions",
+          "completed": true
+        },
+        {
+          "id": "t-2",
+          "topicId": "fe-4-8",
+          "sectionId": "fe-sec-4",
+          "title": "JavaScript — Arrays & Methods",
+          "completed": true
+        },
+        {
+          "id": "t-3",
+          "topicId": "fe-6-2",
+          "sectionId": "fe-sec-6",
+          "title": "React — Functional Components",
+          "completed": true
+        },
+        {
+          "id": "t-4",
+          "topicId": "fe-6-9",
+          "sectionId": "fe-sec-6",
+          "title": "React — useState Hook",
+          "completed": false
+        }
+      ],
+      "completedTasksCount": 3,
+      "totalTasksCount": 4,
+      "completed": false,
+      "completionPercentage": 75
+    },
+    {
+      "id": "dg-1788785481707",
+      "userId": "user-1788785424276-ticmo6",
+      "date": "2026-09-07",
+      "tasks": [
+        {
+          "id": "task-fs-1-1",
+          "topicId": "fs-1-1",
+          "sectionId": "fs-stage-1",
+          "title": "HTML5 Semantic Structure",
+          "role": "Full Stack Developer",
+          "completed": false
+        },
+        {
+          "id": "task-fs-1-2",
+          "topicId": "fs-1-2",
+          "sectionId": "fs-stage-1",
+          "title": "CSS3, Flexbox & Grid",
+          "role": "Full Stack Developer",
+          "completed": false
+        },
+        {
+          "id": "task-fs-1-3",
+          "topicId": "fs-1-3",
+          "sectionId": "fs-stage-1",
+          "title": "JavaScript ES6+ Core Logic",
+          "role": "Full Stack Developer",
+          "completed": false
+        }
+      ],
+      "completedTasksCount": 0,
+      "totalTasksCount": 3,
+      "completed": false,
+      "completionPercentage": 0
+    }
+  ],
+  "activities": [
+    {
+      "userId": "demo-user-id",
+      "activities": [
+        {
+          "date": "2026-09-01",
+          "dayOfWeek": "Tue",
+          "topicsCompleted": 3,
+          "goalsCompleted": 1,
+          "studyMinutes": 120
+        },
+        {
+          "date": "2026-09-02",
+          "dayOfWeek": "Wed",
+          "topicsCompleted": 4,
+          "goalsCompleted": 1,
+          "studyMinutes": 150
+        },
+        {
+          "date": "2026-09-03",
+          "dayOfWeek": "Thu",
+          "topicsCompleted": 2,
+          "goalsCompleted": 1,
+          "studyMinutes": 90
+        },
+        {
+          "date": "2026-09-04",
+          "dayOfWeek": "Fri",
+          "topicsCompleted": 5,
+          "goalsCompleted": 1,
+          "studyMinutes": 180
+        },
+        {
+          "date": "2026-09-05",
+          "dayOfWeek": "Sat",
+          "topicsCompleted": 4,
+          "goalsCompleted": 1,
+          "studyMinutes": 160
+        },
+        {
+          "date": "2026-09-06",
+          "dayOfWeek": "Sun",
+          "topicsCompleted": 3,
+          "goalsCompleted": 1,
+          "studyMinutes": 110
+        },
+        {
+          "date": "2026-09-07",
+          "dayOfWeek": "Mon",
+          "topicsCompleted": 3,
+          "goalsCompleted": 0,
+          "studyMinutes": 105
+        }
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1788785482537",
+      "userId": "user-1788785424276-ticmo6",
+      "type": "daily_reminder",
+      "title": "Daily Goal Reminder 📚",
+      "message": "You still have 3 learning tasks left today. Keep your 0-day streak alive!",
+      "read": false,
+      "createdAt": "2026-09-07T12:51:22.537Z"
+    },
+    {
+      "id": "notif-1",
+      "userId": "demo-user-id",
+      "type": "daily_reminder",
+      "title": "Daily Goal Reminder",
+      "message": "📚 You have 1 task left for today. Complete it to keep your 12-day streak alive!",
+      "read": false,
+      "createdAt": "2026-09-07T11:30:35.269Z"
+    },
+    {
+      "id": "notif-2",
+      "userId": "demo-user-id",
+      "type": "milestone",
+      "title": "Milestone Unlocked!",
+      "message": "🏆 Congratulations! You completed 25 roadmap topics in Frontend Developer.",
+      "read": false,
+      "createdAt": "2026-09-06T11:30:35.269Z"
+    },
+    {
+      "id": "notif-3",
+      "userId": "demo-user-id",
+      "type": "goal_completed",
+      "title": "Streak Continued!",
+      "message": "🔥 Yesterday's daily goal was completed! 12-day streak achieved.",
+      "read": true,
+      "createdAt": "2026-09-05T11:30:35.269Z"
+    },
+    {
+      "id": "notif-1788785424278",
+      "userId": "user-1788785424276-ticmo6",
+      "type": "welcome",
+      "title": "Welcome to CareerTrack AI! 🎉",
+      "message": "Your learning roadmap for Full Stack Developer has been generated. Let's start your journey!",
+      "read": false,
+      "createdAt": "2026-09-07T12:50:24.278Z"
+    }
+  ],
+  "achievements": [
+    {
+      "userId": "demo-user-id",
+      "achievements": [
+        {
+          "id": "first_topic",
+          "title": "First Step",
+          "description": "Completed your first roadmap topic",
+          "icon": "Sparkles",
+          "category": "topics",
+          "requiredCount": 1,
+          "unlocked": true,
+          "progress": 100
+        },
+        {
+          "id": "streak_3",
+          "title": "Consistency Rising",
+          "description": "Achieved a 3-day learning streak",
+          "icon": "Flame",
+          "category": "streak",
+          "requiredCount": 3,
+          "unlocked": true,
+          "progress": 100
+        },
+        {
+          "id": "streak_7",
+          "title": "Week Warrior",
+          "description": "Maintained a 7-day learning streak",
+          "icon": "Zap",
+          "category": "streak",
+          "requiredCount": 7,
+          "unlocked": true,
+          "progress": 100
+        },
+        {
+          "id": "streak_30",
+          "title": "Unstoppable Habit",
+          "description": "Reached an impressive 30-day streak",
+          "icon": "Crown",
+          "category": "streak",
+          "requiredCount": 30,
+          "unlocked": false,
+          "progress": 40
+        },
+        {
+          "id": "topics_10",
+          "title": "Skill Builder",
+          "description": "Completed 10 roadmap learning topics",
+          "icon": "BookOpen",
+          "category": "topics",
+          "requiredCount": 10,
+          "unlocked": true,
+          "progress": 100
+        },
+        {
+          "id": "topics_25",
+          "title": "Knowledge Explorer",
+          "description": "Completed 25 roadmap topics",
+          "icon": "Trophy",
+          "category": "topics",
+          "requiredCount": 25,
+          "unlocked": true,
+          "progress": 100
+        },
+        {
+          "id": "topics_50",
+          "title": "Mastery in Progress",
+          "description": "Completed 50 roadmap topics",
+          "icon": "Award",
+          "category": "topics",
+          "requiredCount": 50,
+          "unlocked": false,
+          "progress": 56
+        },
+        {
+          "id": "first_project",
+          "title": "Builder Mindset",
+          "description": "Completed your first real-world project",
+          "icon": "Laptop",
+          "category": "projects",
+          "requiredCount": 1,
+          "unlocked": true,
+          "progress": 100
+        },
+        {
+          "id": "readiness_50",
+          "title": "Halfway Ready",
+          "description": "Attained a 50% Placement Readiness score",
+          "icon": "Target",
+          "category": "readiness",
+          "requiredCount": 50,
+          "unlocked": true,
+          "progress": 100
+        },
+        {
+          "id": "readiness_80",
+          "title": "Placement Ready",
+          "description": "Reached 80%+ Placement Readiness!",
+          "icon": "GraduationCap",
+          "category": "readiness",
+          "requiredCount": 80,
+          "unlocked": false,
+          "progress": 92
+        }
+      ]
+    },
+    {
+      "userId": "user-1788785424276-ticmo6",
+      "achievements": [
+        {
+          "id": "first_topic",
+          "title": "First Step",
+          "description": "Completed your first roadmap topic",
+          "icon": "Sparkles",
+          "category": "topics",
+          "requiredCount": 1,
+          "unlocked": false,
+          "progress": 0
+        },
+        {
+          "id": "streak_3",
+          "title": "Consistency Rising",
+          "description": "Achieved a 3-day learning streak",
+          "icon": "Flame",
+          "category": "streak",
+          "requiredCount": 3,
+          "unlocked": false,
+          "progress": 0
+        },
+        {
+          "id": "streak_7",
+          "title": "Week Warrior",
+          "description": "Maintained a 7-day learning streak",
+          "icon": "Zap",
+          "category": "streak",
+          "requiredCount": 7,
+          "unlocked": false,
+          "progress": 0
+        },
+        {
+          "id": "streak_30",
+          "title": "Unstoppable Habit",
+          "description": "Reached an impressive 30-day streak",
+          "icon": "Crown",
+          "category": "streak",
+          "requiredCount": 30,
+          "unlocked": false,
+          "progress": 0
+        },
+        {
+          "id": "topics_10",
+          "title": "Skill Builder",
+          "description": "Completed 10 roadmap learning topics",
+          "icon": "BookOpen",
+          "category": "topics",
+          "requiredCount": 10,
+          "unlocked": false,
+          "progress": 0
+        },
+        {
+          "id": "topics_25",
+          "title": "Knowledge Explorer",
+          "description": "Completed 25 roadmap topics",
+          "icon": "Trophy",
+          "category": "topics",
+          "requiredCount": 25,
+          "unlocked": false,
+          "progress": 0
+        },
+        {
+          "id": "topics_50",
+          "title": "Mastery in Progress",
+          "description": "Completed 50 roadmap topics",
+          "icon": "Award",
+          "category": "topics",
+          "requiredCount": 50,
+          "unlocked": false,
+          "progress": 0
+        },
+        {
+          "id": "first_project",
+          "title": "Builder Mindset",
+          "description": "Completed your first real-world project",
+          "icon": "Laptop",
+          "category": "projects",
+          "requiredCount": 1,
+          "unlocked": false,
+          "progress": 0
+        },
+        {
+          "id": "readiness_50",
+          "title": "Halfway Ready",
+          "description": "Attained a 50% Placement Readiness score",
+          "icon": "Target",
+          "category": "readiness",
+          "requiredCount": 50,
+          "unlocked": false,
+          "progress": 0
+        },
+        {
+          "id": "readiness_80",
+          "title": "Placement Ready",
+          "description": "Reached 80%+ Placement Readiness!",
+          "icon": "GraduationCap",
+          "category": "readiness",
+          "requiredCount": 80,
+          "unlocked": false,
+          "progress": 0
+        }
+      ]
+    }
+  ]
+}
