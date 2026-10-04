@@ -20,6 +20,7 @@ import ReadinessGauge from '@/components/ReadinessGauge';
 import DailyGoalsCard from '@/components/DailyGoalsCard';
 import ContinueLearningCard from '@/components/ContinueLearningCard';
 import RoleSwitcherModal from '@/components/RoleSwitcherModal';
+import { useRouter } from 'next/navigation';
 import {
   User,
   Roadmap,
@@ -27,8 +28,10 @@ import {
   PlacementReadinessReport,
   TargetRole,
 } from '@/types';
+import { getAuthHeaders } from '@/lib/client-auth';
 
 export default function DashboardPage() {
+  const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
   const [roadmap, setRoadmap] = useState<Roadmap | null>(null);
   const [dailyGoal, setDailyGoal] = useState<DailyGoal | null>(null);
@@ -44,37 +47,52 @@ export default function DashboardPage() {
 
   const fetchDashboardData = async () => {
     try {
-      const userRes = await fetch('/api/auth/me');
+      const userRes = await fetch('/api/auth/me', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const userData = await userRes.json();
       if (userData.success && userData.user) {
         setUser(userData.user);
 
         const targetRole = userData.user.targetRole || 'Frontend Developer';
-        const roadmapRes = await fetch(`/api/roadmaps/${encodeURIComponent(targetRole)}`);
+        const roadmapRes = await fetch(`/api/roadmaps/${encodeURIComponent(targetRole)}`, {
+          headers: getAuthHeaders(),
+          credentials: 'include',
+        });
         const roadmapData = await roadmapRes.json();
 
         if (roadmapData.success) {
           setRoadmap(roadmapData.roadmap);
           const totalTopics = roadmapData.roadmap.totalTopicsCount || 1;
-          const completedCount = roadmapData.progress.filter((p: any) => p.completed).length;
+          const completedCount = (roadmapData.progress || []).filter((p: any) => p.completed).length;
           setCompletedTopicsCount(completedCount);
           setTotalTopicsCount(totalTopics);
         }
 
-        const goalRes = await fetch('/api/goals');
+        const goalRes = await fetch('/api/goals', {
+          headers: getAuthHeaders(),
+          credentials: 'include',
+        });
         const goalData = await goalRes.json();
         if (goalData.success) {
           setDailyGoal(goalData.goal);
         }
 
-        const profRes = await fetch('/api/profile');
+        const profRes = await fetch('/api/profile', {
+          headers: getAuthHeaders(),
+          credentials: 'include',
+        });
         const profData = await profRes.json();
         if (profData.success && profData.readinessReport) {
           setReadinessReport(profData.readinessReport);
         }
+      } else {
+        router.push('/login');
+        return;
       }
     } catch {
-      // fallback
+      router.push('/login');
     } finally {
       setIsLoading(false);
     }
@@ -84,7 +102,8 @@ export default function DashboardPage() {
     try {
       const res = await fetch('/api/goals/toggle', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({ taskId }),
       });
       const data = await res.json();
@@ -108,7 +127,8 @@ export default function DashboardPage() {
     try {
       const res = await fetch('/api/goals', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({ title }),
       });
       const data = await res.json();
@@ -124,7 +144,8 @@ export default function DashboardPage() {
     try {
       const res = await fetch('/api/profile/switch-role', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({ targetRole: newRole }),
       });
       const data = await res.json();

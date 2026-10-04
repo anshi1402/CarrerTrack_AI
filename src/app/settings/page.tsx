@@ -12,12 +12,15 @@ import {
   Sun,
   Moon,
 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 import MobileNav from '@/components/MobileNav';
 import { useTheme } from '@/components/ThemeProvider';
+import { getAuthHeaders } from '@/lib/client-auth';
 
 export default function SettingsPage() {
+  const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [user, setUser] = useState<any>(null);
   const [name, setName] = useState('');
@@ -40,7 +43,10 @@ export default function SettingsPage() {
 
   const fetchSettings = async () => {
     try {
-      const res = await fetch('/api/settings');
+      const res = await fetch('/api/settings', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const data = await res.json();
       if (data.success && data.settings) {
         setUser(data.settings);
@@ -50,9 +56,12 @@ export default function SettingsPage() {
         if (data.settings.notificationPreferences) {
           setPrefs(data.settings.notificationPreferences);
         }
+      } else {
+        router.push('/login');
+        return;
       }
     } catch {
-      // ignore
+      router.push('/login');
     } finally {
       setIsLoading(false);
     }
@@ -66,7 +75,8 @@ export default function SettingsPage() {
     try {
       const res = await fetch('/api/settings', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({
           name,
           dailyGoalTarget,
@@ -186,6 +196,7 @@ export default function SettingsPage() {
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    placeholder="John Doe"
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-gray-950 border border-slate-200 dark:border-gray-800 text-xs text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   />
                 </div>
@@ -198,6 +209,7 @@ export default function SettingsPage() {
                     type="email"
                     disabled
                     value={user?.email || ''}
+                    placeholder="johndoe@gmail.com"
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-gray-950/60 border border-slate-200 dark:border-gray-800 text-xs text-slate-500 dark:text-gray-500 cursor-not-allowed"
                   />
                 </div>

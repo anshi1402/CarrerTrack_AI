@@ -8,16 +8,16 @@ export async function GET(
 ) {
   try {
     const roleSlug = params.role;
-    const roadmap = dbRepo.getRoadmapByRole(roleSlug);
+    const roadmap = await dbRepo.getRoadmapByRole(roleSlug);
 
     if (!roadmap) {
       return NextResponse.json({ error: 'Roadmap not found' }, { status: 404 });
     }
 
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     let progress: any[] = [];
     if (user) {
-      progress = dbRepo.getUserProgress(user.id, roadmap.role);
+      progress = await dbRepo.getUserProgress(user.id, roadmap.role);
     }
 
     return NextResponse.json({

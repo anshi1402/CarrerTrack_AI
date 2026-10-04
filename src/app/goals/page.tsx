@@ -13,10 +13,13 @@ import {
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 import MobileNav from '@/components/MobileNav';
+import { useRouter } from 'next/navigation';
 import { User, DailyGoal, Roadmap } from '@/types';
 import { fireCelebrationConfetti } from '@/components/ConfettiTrigger';
+import { getAuthHeaders } from '@/lib/client-auth';
 
 export default function GoalsPage() {
+  const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
   const [dailyGoal, setDailyGoal] = useState<DailyGoal | null>(null);
   const [roadmap, setRoadmap] = useState<Roadmap | null>(null);
@@ -31,25 +34,37 @@ export default function GoalsPage() {
 
   const fetchGoalsData = async () => {
     try {
-      const userRes = await fetch('/api/auth/me');
+      const userRes = await fetch('/api/auth/me', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const userData = await userRes.json();
       if (userData.success && userData.user) {
         setUser(userData.user);
 
-        const goalRes = await fetch('/api/goals');
+        const goalRes = await fetch('/api/goals', {
+          headers: getAuthHeaders(),
+          credentials: 'include',
+        });
         const goalData = await goalRes.json();
         if (goalData.success) {
           setDailyGoal(goalData.goal);
         }
 
-        const roadmapRes = await fetch(`/api/roadmaps/${encodeURIComponent(userData.user.targetRole)}`);
+        const roadmapRes = await fetch(`/api/roadmaps/${encodeURIComponent(userData.user.targetRole)}`, {
+          headers: getAuthHeaders(),
+          credentials: 'include',
+        });
         const roadmapData = await roadmapRes.json();
         if (roadmapData.success) {
           setRoadmap(roadmapData.roadmap);
         }
+      } else {
+        router.push('/login');
+        return;
       }
     } catch {
-      // ignore
+      router.push('/login');
     } finally {
       setIsLoading(false);
     }
@@ -59,7 +74,8 @@ export default function GoalsPage() {
     try {
       const res = await fetch('/api/goals/toggle', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({ taskId }),
       });
       const data = await res.json();
@@ -105,7 +121,8 @@ export default function GoalsPage() {
     try {
       const res = await fetch('/api/goals', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({ title: titleToAdd, topicId, sectionId }),
       });
       const data = await res.json();

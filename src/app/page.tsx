@@ -1,32 +1,26 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import {
   Compass,
-  Flame,
-  CheckCircle2,
-  ShieldCheck,
-  BarChart3,
-  Bell,
   ArrowRight,
-  Sparkles,
+  Flame,
   Layout,
   Server,
   Layers,
   Coffee,
   Terminal,
+  BarChart3,
   BrainCircuit,
   Cpu,
   ChevronRight,
-  CheckSquare,
-  PlayCircle,
+  ShieldCheck,
 } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
 
 const ROLES_PREVIEW = [
-  { name: 'Frontend Developer', icon: Layout, topics: 82, color: 'from-blue-500 to-indigo-600', badge: 'High Placement Demand' },
+  { name: 'Frontend Developer', icon: Layout, topics: 82, color: 'from-indigo-500 to-blue-600', badge: 'High Demand' },
   { name: 'Backend Developer', icon: Server, topics: 42, color: 'from-emerald-500 to-teal-600', badge: 'Core Engineering' },
   { name: 'Full Stack Developer', icon: Layers, topics: 36, color: 'from-purple-500 to-indigo-600', badge: 'Most Popular' },
   { name: 'Java Developer', icon: Coffee, topics: 26, color: 'from-amber-500 to-orange-600', badge: 'Enterprise Standard' },
@@ -37,24 +31,6 @@ const ROLES_PREVIEW = [
 ];
 
 export default function LandingPage() {
-  const router = useRouter();
-  const [isDemoLoading, setIsDemoLoading] = useState(false);
-
-  const handleDemoLogin = async () => {
-    setIsDemoLoading(true);
-    try {
-      const res = await fetch('/api/auth/demo', { method: 'POST' });
-      const data = await res.json();
-      if (data.success) {
-        router.push('/dashboard');
-      }
-    } catch {
-      router.push('/dashboard');
-    } finally {
-      setIsDemoLoading(false);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-[#0B0F19] text-slate-900 dark:text-white flex flex-col selection:bg-indigo-500 selection:text-white transition-colors duration-200">
       {/* Top Navigation */}
@@ -75,28 +51,18 @@ export default function LandingPage() {
             {/* Theme Toggle Button */}
             <ThemeToggle />
 
-            <button
-              onClick={handleDemoLogin}
-              disabled={isDemoLoading}
-              className="px-3.5 py-1.5 rounded-xl border border-indigo-500/40 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-600 dark:text-indigo-300 text-xs font-semibold transition-all flex items-center gap-1.5"
-            >
-              <Sparkles className="h-3.5 w-3.5 text-indigo-500 dark:text-indigo-400" />
-              <span className="hidden sm:inline">{isDemoLoading ? 'Launching...' : '1-Click Demo'}</span>
-              <span className="sm:hidden">{isDemoLoading ? '...' : 'Demo'}</span>
-            </button>
-
             <Link
               href="/login"
               className="text-xs font-medium text-slate-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white px-2.5 py-1.5"
             >
-              Log In
+              Sign In
             </Link>
 
             <Link
               href="/register"
               className="px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-xs font-bold text-white shadow-lg shadow-indigo-600/30 transition-all hover:scale-105"
             >
-              Get Started
+              Get Started Free
             </Link>
           </div>
         </div>
@@ -138,14 +104,12 @@ export default function LandingPage() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
 
-              <button
-                onClick={handleDemoLogin}
-                disabled={isDemoLoading}
+              <Link
+                href="/login"
                 className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white dark:bg-gray-900/80 hover:bg-slate-100 dark:hover:bg-gray-800 border border-slate-300 dark:border-gray-700 text-sm font-bold text-slate-700 dark:text-gray-200 transition-all flex items-center justify-center gap-2 shadow-sm"
               >
-                <PlayCircle className="h-4 w-4 text-emerald-500" />
-                <span>{isDemoLoading ? 'Loading Workspace...' : 'Explore Demo Dashboard'}</span>
-              </button>
+                <span>Sign In to Account</span>
+              </Link>
             </div>
 
             {/* Stats Bar */}
@@ -285,9 +249,8 @@ export default function LandingPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>© 2026 CareerTrack AI. Built for engineering & degree students.</p>
           <div className="flex items-center gap-4 text-slate-600 dark:text-gray-400">
-            <Link href="/login" className="hover:text-indigo-600 dark:hover:text-white">Login</Link>
+            <Link href="/login" className="hover:text-indigo-600 dark:hover:text-white">Sign In</Link>
             <Link href="/register" className="hover:text-indigo-600 dark:hover:text-white">Register</Link>
-            <button onClick={handleDemoLogin} className="hover:text-indigo-600 dark:hover:text-indigo-400">Demo Account</button>
           </div>
         </div>
       </footer>

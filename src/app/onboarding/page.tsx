@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { TargetRole, SkillLevel } from '@/types';
 import { fireCelebrationConfetti } from '@/components/ConfettiTrigger';
+import { getAuthHeaders } from '@/lib/client-auth';
 
 const ROLES: { name: TargetRole; icon: any; desc: string; topics: number }[] = [
   { name: 'Frontend Developer', icon: Layout, desc: 'HTML/CSS, JavaScript, React, Web APIs & Frontend Architecture', topics: 82 },
@@ -48,7 +49,8 @@ export default function OnboardingPage() {
     try {
       const res = await fetch('/api/onboarding', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({
           targetRole,
           skillLevel,

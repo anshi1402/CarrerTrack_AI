@@ -3,7 +3,7 @@ import { dbRepo } from '@/lib/db';
 
 export async function GET() {
   try {
-    const roadmaps = dbRepo.getAllRoadmaps();
+    const roadmaps = await dbRepo.getAllRoadmaps();
     const summary = roadmaps.map((r) => ({
       id: r.id,
       role: r.role,

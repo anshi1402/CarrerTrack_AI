@@ -1,39 +1,38 @@
 {
   "users": [
     {
-      "id": "demo-user-id",
-      "name": "Anshi",
-      "email": "anshi@careertrack.ai",
-      "password": "$2a$10$w4r19mEwzHj07uX.0/d9oecmFzH.w4wG8.E4e2r7xM7N5jY7R9pFe",
+      "id": "user-1791113616313-iqjis3",
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "password": "$2a$10$oz/MA6jQ/z6NsUo0UaeKjuvLxsznyfWK3aoQR3FBPuGUc5h6BY3eG",
       "targetRole": "Frontend Developer",
-      "skillLevel": "Intermediate",
-      "dailyGoalTarget": 4,
+      "skillLevel": "Beginner",
+      "dailyGoalTarget": 3,
       "reminderTime": "20:00",
       "notificationPreferences": {
         "dailyGoalReminder": true,
         "streakReminder": true,
         "achievementNotifications": true,
         "weeklyProgressSummary": true,
-        "browserNotifications": true,
+        "browserNotifications": false,
         "reminderTime": "20:00"
       },
-      "currentStreak": 12,
-      "longestStreak": 15,
-      "lastLearningDate": "2026-09-07",
-      "readinessScore": 26,
-      "completedTopicsCount": 29,
-      "completedProjectsCount": 2,
+      "currentStreak": 0,
+      "longestStreak": 0,
+      "readinessScore": 1,
+      "completedTopicsCount": 2,
+      "completedProjectsCount": 0,
       "onboardingCompleted": true,
-      "createdAt": "2026-09-07T11:30:35.269Z"
+      "createdAt": "2026-10-04T11:33:36.313Z"
     },
     {
-      "id": "user-1788785424276-ticmo6",
-      "name": "Ranjani",
-      "email": "ranjani4120@gmail.com",
-      "password": "$2a$10$cxvoawDmvxyvZOg1xCFyP.lUVhzQxQ1UzsAa1vaLJg4SyUGFKMV9e",
-      "targetRole": "Full Stack Developer",
+      "id": "user-1791113928450-xbyvqi",
+      "name": "Thanu",
+      "email": "aranganathan0909@gmail.com",
+      "password": "$2a$10$AKJkT89i/9vf3In2fKUkDeexoH9L156.hqAWSWfop/1FF.ilqaGcW",
+      "targetRole": "Frontend Developer",
       "skillLevel": "Beginner",
-      "dailyGoalTarget": 3,
+      "dailyGoalTarget": 2,
       "reminderTime": "20:00",
       "notificationPreferences": {
         "dailyGoalReminder": true,
@@ -49,7 +48,7 @@
       "completedTopicsCount": 0,
       "completedProjectsCount": 0,
       "onboardingCompleted": true,
-      "createdAt": "2026-09-07T12:50:24.276Z"
+      "createdAt": "2026-10-04T11:38:48.450Z"
     }
   ],
   "roadmaps": [
@@ -2395,449 +2394,141 @@
   ],
   "progress": [
     {
-      "id": "p-1",
-      "userId": "demo-user-id",
+      "id": "p-1791113616369-6d8e",
+      "userId": "user-1791113616313-iqjis3",
       "role": "Frontend Developer",
       "topicId": "fe-1-1",
       "sectionId": "fe-sec-1",
       "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
+      "completedAt": "2026-10-04T11:33:36.369Z"
     },
     {
-      "id": "p-2",
-      "userId": "demo-user-id",
+      "id": "p-1791113616388-3gtu",
+      "userId": "user-1791113616313-iqjis3",
       "role": "Frontend Developer",
       "topicId": "fe-1-2",
       "sectionId": "fe-sec-1",
       "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-3",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-1-3",
-      "sectionId": "fe-sec-1",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-4",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-1-4",
-      "sectionId": "fe-sec-1",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-5",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-1-5",
-      "sectionId": "fe-sec-1",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-6",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-1-6",
-      "sectionId": "fe-sec-1",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-7",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-2-1",
-      "sectionId": "fe-sec-2",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-8",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-2-2",
-      "sectionId": "fe-sec-2",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-9",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-2-3",
-      "sectionId": "fe-sec-2",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-10",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-2-4",
-      "sectionId": "fe-sec-2",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-11",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-2-5",
-      "sectionId": "fe-sec-2",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-12",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-2-6",
-      "sectionId": "fe-sec-2",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-13",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-2-7",
-      "sectionId": "fe-sec-2",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-14",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-3-1",
-      "sectionId": "fe-sec-3",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-15",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-3-2",
-      "sectionId": "fe-sec-3",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-16",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-3-4",
-      "sectionId": "fe-sec-3",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-17",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-3-7",
-      "sectionId": "fe-sec-3",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-18",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-4-1",
-      "sectionId": "fe-sec-4",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-19",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-4-2",
-      "sectionId": "fe-sec-4",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-20",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-4-6",
-      "sectionId": "fe-sec-4",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-21",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-4-8",
-      "sectionId": "fe-sec-4",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-22",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-4-10",
-      "sectionId": "fe-sec-4",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-23",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-5-1",
-      "sectionId": "fe-sec-5",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-24",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-5-2",
-      "sectionId": "fe-sec-5",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-25",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-6-1",
-      "sectionId": "fe-sec-6",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-26",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-6-2",
-      "sectionId": "fe-sec-6",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-27",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-8-1",
-      "sectionId": "fe-sec-8",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-28",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-8-2",
-      "sectionId": "fe-sec-8",
-      "completed": true,
-      "completedAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "p-1788781058690-3o3a",
-      "userId": "demo-user-id",
-      "role": "Frontend Developer",
-      "topicId": "fe-2-8",
-      "sectionId": "fe-sec-2",
-      "completed": true,
-      "completedAt": "2026-09-07T11:37:38.690Z"
+      "completedAt": "2026-10-04T11:33:36.388Z"
     }
   ],
   "dailyGoals": [
     {
-      "id": "dg-demo",
-      "userId": "demo-user-id",
-      "date": "2026-09-07",
+      "id": "dg-1791113616371",
+      "userId": "user-1791113616313-iqjis3",
+      "date": "2026-10-04",
       "tasks": [
         {
-          "id": "t-1",
-          "topicId": "fe-4-6",
-          "sectionId": "fe-sec-4",
-          "title": "JavaScript — Functions",
-          "completed": true
+          "id": "task-fe-1-2",
+          "topicId": "fe-1-2",
+          "sectionId": "fe-sec-1",
+          "title": "Client and Server Architecture",
+          "role": "Frontend Developer",
+          "completed": true,
+          "completedAt": "2026-10-04T11:33:36.388Z"
         },
         {
-          "id": "t-2",
-          "topicId": "fe-4-8",
-          "sectionId": "fe-sec-4",
-          "title": "JavaScript — Arrays & Methods",
-          "completed": true
+          "id": "task-fe-1-3",
+          "topicId": "fe-1-3",
+          "sectionId": "fe-sec-1",
+          "title": "HTTP and HTTPS Protocols",
+          "role": "Frontend Developer",
+          "completed": false
         },
         {
-          "id": "t-3",
-          "topicId": "fe-6-2",
-          "sectionId": "fe-sec-6",
-          "title": "React — Functional Components",
-          "completed": true
-        },
-        {
-          "id": "t-4",
-          "topicId": "fe-6-9",
-          "sectionId": "fe-sec-6",
-          "title": "React — useState Hook",
+          "id": "task-fe-1-4",
+          "topicId": "fe-1-4",
+          "sectionId": "fe-sec-1",
+          "title": "Browser Basics & Rendering Engine",
+          "role": "Frontend Developer",
           "completed": false
         }
       ],
-      "completedTasksCount": 3,
-      "totalTasksCount": 4,
-      "completed": false,
-      "completionPercentage": 75
-    },
-    {
-      "id": "dg-1788785481707",
-      "userId": "user-1788785424276-ticmo6",
-      "date": "2026-09-07",
-      "tasks": [
-        {
-          "id": "task-fs-1-1",
-          "topicId": "fs-1-1",
-          "sectionId": "fs-stage-1",
-          "title": "HTML5 Semantic Structure",
-          "role": "Full Stack Developer",
-          "completed": false
-        },
-        {
-          "id": "task-fs-1-2",
-          "topicId": "fs-1-2",
-          "sectionId": "fs-stage-1",
-          "title": "CSS3, Flexbox & Grid",
-          "role": "Full Stack Developer",
-          "completed": false
-        },
-        {
-          "id": "task-fs-1-3",
-          "topicId": "fs-1-3",
-          "sectionId": "fs-stage-1",
-          "title": "JavaScript ES6+ Core Logic",
-          "role": "Full Stack Developer",
-          "completed": false
-        }
-      ],
-      "completedTasksCount": 0,
+      "completedTasksCount": 1,
       "totalTasksCount": 3,
       "completed": false,
-      "completionPercentage": 0
-    }
-  ],
-  "activities": [
+      "completionPercentage": 33
+    },
     {
-      "userId": "demo-user-id",
-      "activities": [
+      "id": "dg-1791113950903",
+      "userId": "user-1791113928450-xbyvqi",
+      "date": "2026-10-04",
+      "tasks": [
         {
-          "date": "2026-09-01",
-          "dayOfWeek": "Tue",
-          "topicsCompleted": 3,
-          "goalsCompleted": 1,
-          "studyMinutes": 120
+          "id": "task-fe-1-1",
+          "topicId": "fe-1-1",
+          "sectionId": "fe-sec-1",
+          "title": "How the Web Works",
+          "role": "Frontend Developer",
+          "completed": true,
+          "completedAt": "2026-10-04T11:39:23.188Z"
         },
         {
-          "date": "2026-09-02",
-          "dayOfWeek": "Wed",
-          "topicsCompleted": 4,
-          "goalsCompleted": 1,
-          "studyMinutes": 150
+          "id": "task-fe-1-2",
+          "topicId": "fe-1-2",
+          "sectionId": "fe-sec-1",
+          "title": "Client and Server Architecture",
+          "role": "Frontend Developer",
+          "completed": false
         },
         {
-          "date": "2026-09-03",
-          "dayOfWeek": "Thu",
-          "topicsCompleted": 2,
-          "goalsCompleted": 1,
-          "studyMinutes": 90
-        },
-        {
-          "date": "2026-09-04",
-          "dayOfWeek": "Fri",
-          "topicsCompleted": 5,
-          "goalsCompleted": 1,
-          "studyMinutes": 180
-        },
-        {
-          "date": "2026-09-05",
-          "dayOfWeek": "Sat",
-          "topicsCompleted": 4,
-          "goalsCompleted": 1,
-          "studyMinutes": 160
-        },
-        {
-          "date": "2026-09-06",
-          "dayOfWeek": "Sun",
-          "topicsCompleted": 3,
-          "goalsCompleted": 1,
-          "studyMinutes": 110
-        },
-        {
-          "date": "2026-09-07",
-          "dayOfWeek": "Mon",
-          "topicsCompleted": 3,
-          "goalsCompleted": 0,
-          "studyMinutes": 105
+          "id": "task-1791113977931-indk",
+          "title": "Web Fundamentals — HTTP and HTTPS Protocols",
+          "topicId": "fe-1-3",
+          "sectionId": "fe-sec-1",
+          "role": "Frontend Developer",
+          "completed": true,
+          "completedAt": "2026-10-04T11:39:39.823Z"
         }
-      ]
+      ],
+      "completedTasksCount": 2,
+      "totalTasksCount": 3,
+      "completed": false,
+      "completionPercentage": 67
     }
   ],
+  "activities": [],
   "notifications": [
     {
-      "id": "notif-1788785482537",
-      "userId": "user-1788785424276-ticmo6",
+      "id": "notif-1791113952530",
+      "userId": "user-1791113928450-xbyvqi",
       "type": "daily_reminder",
       "title": "Daily Goal Reminder 📚",
-      "message": "You still have 3 learning tasks left today. Keep your 0-day streak alive!",
+      "message": "You still have 2 learning tasks left today. Keep your 0-day streak alive!",
       "read": false,
-      "createdAt": "2026-09-07T12:51:22.537Z"
+      "createdAt": "2026-10-04T11:39:12.530Z"
     },
     {
-      "id": "notif-1",
-      "userId": "demo-user-id",
-      "type": "daily_reminder",
-      "title": "Daily Goal Reminder",
-      "message": "📚 You have 1 task left for today. Complete it to keep your 12-day streak alive!",
-      "read": false,
-      "createdAt": "2026-09-07T11:30:35.269Z"
-    },
-    {
-      "id": "notif-2",
-      "userId": "demo-user-id",
+      "id": "notif-1791113616378",
+      "userId": "user-1791113616313-iqjis3",
       "type": "milestone",
-      "title": "Milestone Unlocked!",
-      "message": "🏆 Congratulations! You completed 25 roadmap topics in Frontend Developer.",
+      "title": "🏆 Badge Unlocked: First Step!",
+      "message": "Great job! You just unlocked the 'First Step' achievement on your learning journey!",
       "read": false,
-      "createdAt": "2026-09-06T11:30:35.269Z"
+      "createdAt": "2026-10-04T11:33:36.378Z"
     },
     {
-      "id": "notif-3",
-      "userId": "demo-user-id",
-      "type": "goal_completed",
-      "title": "Streak Continued!",
-      "message": "🔥 Yesterday's daily goal was completed! 12-day streak achieved.",
-      "read": true,
-      "createdAt": "2026-09-05T11:30:35.269Z"
-    },
-    {
-      "id": "notif-1788785424278",
-      "userId": "user-1788785424276-ticmo6",
+      "id": "notif-1791113616315",
+      "userId": "user-1791113616313-iqjis3",
       "type": "welcome",
       "title": "Welcome to CareerTrack AI! 🎉",
-      "message": "Your learning roadmap for Full Stack Developer has been generated. Let's start your journey!",
+      "message": "Your learning roadmap for Frontend Developer has been generated. Let's start your journey!",
       "read": false,
-      "createdAt": "2026-09-07T12:50:24.278Z"
+      "createdAt": "2026-10-04T11:33:36.315Z"
+    },
+    {
+      "id": "notif-1791113928450",
+      "userId": "user-1791113928450-xbyvqi",
+      "type": "welcome",
+      "title": "Welcome to CareerTrack AI! 🎉",
+      "message": "Your learning roadmap for Frontend Developer has been generated. Let's start your journey!",
+      "read": false,
+      "createdAt": "2026-10-04T11:38:48.450Z"
     }
   ],
   "achievements": [
     {
-      "userId": "demo-user-id",
+      "userId": "user-1791113616313-iqjis3",
       "achievements": [
         {
           "id": "first_topic",
@@ -2847,7 +2538,8 @@
           "category": "topics",
           "requiredCount": 1,
           "unlocked": true,
-          "progress": 100
+          "progress": 100,
+          "unlockedAt": "2026-10-04T11:33:36.376Z"
         },
         {
           "id": "streak_3",
@@ -2856,8 +2548,8 @@
           "icon": "Flame",
           "category": "streak",
           "requiredCount": 3,
-          "unlocked": true,
-          "progress": 100
+          "unlocked": false,
+          "progress": 0
         },
         {
           "id": "streak_7",
@@ -2866,8 +2558,8 @@
           "icon": "Zap",
           "category": "streak",
           "requiredCount": 7,
-          "unlocked": true,
-          "progress": 100
+          "unlocked": false,
+          "progress": 0
         },
         {
           "id": "streak_30",
@@ -2877,7 +2569,7 @@
           "category": "streak",
           "requiredCount": 30,
           "unlocked": false,
-          "progress": 40
+          "progress": 0
         },
         {
           "id": "topics_10",
@@ -2886,8 +2578,8 @@
           "icon": "BookOpen",
           "category": "topics",
           "requiredCount": 10,
-          "unlocked": true,
-          "progress": 100
+          "unlocked": false,
+          "progress": 0
         },
         {
           "id": "topics_25",
@@ -2896,8 +2588,8 @@
           "icon": "Trophy",
           "category": "topics",
           "requiredCount": 25,
-          "unlocked": true,
-          "progress": 100
+          "unlocked": false,
+          "progress": 0
         },
         {
           "id": "topics_50",
@@ -2907,7 +2599,7 @@
           "category": "topics",
           "requiredCount": 50,
           "unlocked": false,
-          "progress": 56
+          "progress": 0
         },
         {
           "id": "first_project",
@@ -2916,8 +2608,8 @@
           "icon": "Laptop",
           "category": "projects",
           "requiredCount": 1,
-          "unlocked": true,
-          "progress": 100
+          "unlocked": false,
+          "progress": 0
         },
         {
           "id": "readiness_50",
@@ -2926,8 +2618,8 @@
           "icon": "Target",
           "category": "readiness",
           "requiredCount": 50,
-          "unlocked": true,
-          "progress": 100
+          "unlocked": false,
+          "progress": 0
         },
         {
           "id": "readiness_80",
@@ -2937,12 +2629,12 @@
           "category": "readiness",
           "requiredCount": 80,
           "unlocked": false,
-          "progress": 92
+          "progress": 0
         }
       ]
     },
     {
-      "userId": "user-1788785424276-ticmo6",
+      "userId": "user-1791113928450-xbyvqi",
       "achievements": [
         {
           "id": "first_topic",

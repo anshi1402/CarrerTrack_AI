@@ -5,7 +5,7 @@ import { TargetRole } from '@/types';
 
 export async function POST(request: NextRequest) {
   try {
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -17,11 +17,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'targetRole is required' }, { status: 400 });
     }
 
-    const updatedUser = dbRepo.updateUser(user.id, {
+    const updatedUser = await dbRepo.updateUser(user.id, {
       targetRole: targetRole as TargetRole,
     });
 
-    const newRoadmap = dbRepo.getRoadmapByRole(targetRole);
+    const newRoadmap = await dbRepo.getRoadmapByRole(targetRole);
 
     return NextResponse.json({
       success: true,

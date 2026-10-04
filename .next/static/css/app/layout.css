@@ -611,10 +611,6 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -1236,9 +1232,6 @@ video {
 .border-indigo-500\/30 {
   border-color: rgb(99 102 241 / 0.3);
 }
-.border-indigo-500\/40 {
-  border-color: rgb(99 102 241 / 0.4);
-}
 .border-indigo-900\/40 {
   border-color: rgb(49 46 129 / 0.4);
 }
@@ -1497,11 +1490,6 @@ video {
 .from-amber-600 {
   --tw-gradient-from: #d97706 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(217 119 6 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.from-blue-500 {
-  --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .from-cyan-500 {
@@ -2188,10 +2176,6 @@ video {
   --tw-shadow-color: rgb(99 102 241 / 0.3);
   --tw-shadow: var(--tw-shadow-colored);
 }
-.shadow-indigo-600\/20 {
-  --tw-shadow-color: rgb(79 70 229 / 0.2);
-  --tw-shadow: var(--tw-shadow-colored);
-}
 .shadow-indigo-600\/30 {
   --tw-shadow-color: rgb(79 70 229 / 0.3);
   --tw-shadow: var(--tw-shadow-colored);
@@ -2513,10 +2497,6 @@ video {
 .hover\:bg-indigo-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-indigo-500\/20:hover {
-  background-color: rgb(99 102 241 / 0.2);
 }
 
 .hover\:bg-rose-50:hover {
@@ -3270,10 +3250,6 @@ video {
 
   .sm\:inline-block {
     display: inline-block;
-  }
-
-  .sm\:inline {
-    display: inline;
   }
 
   .sm\:flex {

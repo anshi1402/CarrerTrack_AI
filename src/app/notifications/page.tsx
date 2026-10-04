@@ -12,9 +12,12 @@ import {
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 import MobileNav from '@/components/MobileNav';
+import { useRouter } from 'next/navigation';
 import { User, UserNotification } from '@/types';
+import { getAuthHeaders } from '@/lib/client-auth';
 
 export default function NotificationsPage() {
+  const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
   const [notifications, setNotifications] = useState<UserNotification[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
@@ -32,20 +35,29 @@ export default function NotificationsPage() {
 
   const fetchData = async () => {
     try {
-      const userRes = await fetch('/api/auth/me');
+      const userRes = await fetch('/api/auth/me', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const userData = await userRes.json();
-      if (userData.success) {
+      if (userData.success && userData.user) {
         setUser(userData.user);
+      } else {
+        router.push('/login');
+        return;
       }
 
-      const notifRes = await fetch('/api/notifications');
+      const notifRes = await fetch('/api/notifications', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const notifData = await notifRes.json();
       if (notifData.success) {
         setNotifications(notifData.notifications || []);
         setUnreadCount(notifData.unreadCount || 0);
       }
     } catch {
-      // ignore
+      router.push('/login');
     } finally {
       setIsLoading(false);
     }
@@ -53,7 +65,11 @@ export default function NotificationsPage() {
 
   const markAllRead = async () => {
     try {
-      const res = await fetch('/api/notifications/mark-read', { method: 'POST' });
+      const res = await fetch('/api/notifications/mark-read', {
+        method: 'POST',
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const data = await res.json();
       if (data.success) {
         setNotifications(data.notifications || []);
@@ -69,7 +85,8 @@ export default function NotificationsPage() {
     try {
       const res = await fetch('/api/notifications/trigger', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({ type }),
       });
       const data = await res.json();

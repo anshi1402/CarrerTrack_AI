@@ -21,10 +21,13 @@ import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 import MobileNav from '@/components/MobileNav';
 import ReadinessGauge from '@/components/ReadinessGauge';
+import { useRouter } from 'next/navigation';
 import { User, AnalyticsSummary } from '@/types';
 import { useTheme } from '@/components/ThemeProvider';
+import { getAuthHeaders } from '@/lib/client-auth';
 
 export default function AnalyticsPage() {
+  const router = useRouter();
   const { theme } = useTheme();
   const [user, setUser] = useState<User | null>(null);
   const [analytics, setAnalytics] = useState<AnalyticsSummary | null>(null);
@@ -36,19 +39,28 @@ export default function AnalyticsPage() {
 
   const fetchAnalytics = async () => {
     try {
-      const userRes = await fetch('/api/auth/me');
+      const userRes = await fetch('/api/auth/me', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const userData = await userRes.json();
-      if (userData.success) {
+      if (userData.success && userData.user) {
         setUser(userData.user);
+      } else {
+        router.push('/login');
+        return;
       }
 
-      const res = await fetch('/api/analytics');
+      const res = await fetch('/api/analytics', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const data = await res.json();
       if (data.success) {
         setAnalytics(data.summary);
       }
     } catch {
-      // ignore
+      router.push('/login');
     } finally {
       setIsLoading(false);
     }

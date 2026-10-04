@@ -1,8 +1,11 @@
-import { User, DailyGoal } from '@/types';
+import { DailyGoal } from '@/types';
 import { dbRepo } from './db';
 
-export function evaluateAndUpdateStreak(userId: string, todayGoal: DailyGoal): { currentStreak: number; longestStreak: number; streakIncreased: boolean } {
-  const user = dbRepo.getUserById(userId);
+export async function evaluateAndUpdateStreak(
+  userId: string,
+  todayGoal: DailyGoal
+): Promise<{ currentStreak: number; longestStreak: number; streakIncreased: boolean }> {
+  const user = await dbRepo.getUserById(userId);
   if (!user) return { currentStreak: 0, longestStreak: 0, streakIncreased: false };
 
   const todayStr = new Date().toISOString().split('T')[0];
@@ -31,7 +34,7 @@ export function evaluateAndUpdateStreak(userId: string, todayGoal: DailyGoal): {
       }
 
       streakIncreased = true;
-      dbRepo.updateUser(userId, {
+      await dbRepo.updateUser(userId, {
         currentStreak,
         longestStreak,
         lastLearningDate: todayStr,
@@ -39,7 +42,7 @@ export function evaluateAndUpdateStreak(userId: string, todayGoal: DailyGoal): {
 
       // Add achievement or notification if milestone
       if (currentStreak === 3 || currentStreak === 7 || currentStreak === 30) {
-        dbRepo.addNotification({
+        await dbRepo.addNotification({
           id: 'notif-' + Date.now(),
           userId,
           type: 'milestone',

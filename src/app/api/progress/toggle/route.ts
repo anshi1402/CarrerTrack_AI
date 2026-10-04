@@ -7,7 +7,7 @@ import { TargetRole } from '@/types';
 
 export async function POST(request: NextRequest) {
   try {
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -20,16 +20,16 @@ export async function POST(request: NextRequest) {
     }
 
     const targetRole: TargetRole = role || user.targetRole;
-    const { completed, allProgress } = dbRepo.toggleProgress(user.id, targetRole, topicId, sectionId);
+    const { completed, allProgress } = await dbRepo.toggleProgress(user.id, targetRole, topicId, sectionId);
 
     // Fetch roadmap
-    const roadmap = dbRepo.getRoadmapByRole(targetRole);
+    const roadmap = await dbRepo.getRoadmapByRole(targetRole);
     if (!roadmap) {
       return NextResponse.json({ error: 'Roadmap not found' }, { status: 404 });
     }
 
-    const todayGoal = dbRepo.getDailyGoal(user.id);
-    const { currentStreak, longestStreak, streakIncreased } = evaluateAndUpdateStreak(user.id, todayGoal);
+    const todayGoal = await dbRepo.getDailyGoal(user.id);
+    const { currentStreak, longestStreak, streakIncreased } = await evaluateAndUpdateStreak(user.id, todayGoal);
 
     // Compute updated readiness score
     const readinessReport = calculatePlacementReadiness(user, roadmap, allProgress, [todayGoal]);
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     const completedProjectsCount = projectTopics.filter((t) => completedProjectIds.has(t.id)).length;
 
     // Update user stats
-    dbRepo.updateUser(user.id, {
+    await dbRepo.updateUser(user.id, {
       readinessScore: readinessReport.score,
       completedTopicsCount,
       completedProjectsCount,
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
 
     // Milestone check & notifications
     let newlyUnlockedBadge: string | null = null;
-    const achievements = dbRepo.getAchievements(user.id);
+    const achievements = await dbRepo.getAchievements(user.id);
     let achievementsModified = false;
 
     achievements.forEach((badge) => {
@@ -103,9 +103,9 @@ export async function POST(request: NextRequest) {
     });
 
     if (achievementsModified) {
-      dbRepo.updateAchievements(user.id, achievements);
+      await dbRepo.updateAchievements(user.id, achievements);
       if (newlyUnlockedBadge) {
-        dbRepo.addNotification({
+        await dbRepo.addNotification({
           id: 'notif-' + Date.now(),
           userId: user.id,
           type: 'milestone',
@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
 
     // If daily goal completed, notify
     if (todayGoal.completed && streakIncreased) {
-      dbRepo.addNotification({
+      await dbRepo.addNotification({
         id: 'notif-' + Date.now(),
         userId: user.id,
         type: 'goal_completed',

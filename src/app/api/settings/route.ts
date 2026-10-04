@@ -4,7 +4,7 @@ import { dbRepo } from '@/lib/db';
 
 export async function GET(request: NextRequest) {
   try {
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
       notificationPreferences,
     } = body;
 
-    const updatedUser = dbRepo.updateUser(user.id, {
+    const updatedUser = await dbRepo.updateUser(user.id, {
       ...(name && { name }),
       ...(dailyGoalTarget && { dailyGoalTarget: Number(dailyGoalTarget) }),
       ...(reminderTime && { reminderTime }),

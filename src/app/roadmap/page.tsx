@@ -12,10 +12,13 @@ import Sidebar from '@/components/Sidebar';
 import MobileNav from '@/components/MobileNav';
 import RoadmapSectionCard from '@/components/RoadmapSectionCard';
 import RoleSwitcherModal from '@/components/RoleSwitcherModal';
+import { useRouter } from 'next/navigation';
 import { User, Roadmap, TargetRole } from '@/types';
 import { fireCelebrationConfetti } from '@/components/ConfettiTrigger';
+import { getAuthHeaders } from '@/lib/client-auth';
 
 export default function RoadmapPage() {
+  const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
   const [roadmap, setRoadmap] = useState<Roadmap | null>(null);
   const [completedTopicIds, setCompletedTopicIds] = useState<Set<string>>(new Set());
@@ -30,25 +33,34 @@ export default function RoadmapPage() {
 
   const fetchRoadmapData = async () => {
     try {
-      const userRes = await fetch('/api/auth/me');
+      const userRes = await fetch('/api/auth/me', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const userData = await userRes.json();
       if (userData.success && userData.user) {
         setUser(userData.user);
         const targetRole = userData.user.targetRole || 'Frontend Developer';
 
-        const roadmapRes = await fetch(`/api/roadmaps/${encodeURIComponent(targetRole)}`);
+        const roadmapRes = await fetch(`/api/roadmaps/${encodeURIComponent(targetRole)}`, {
+          headers: getAuthHeaders(),
+          credentials: 'include',
+        });
         const roadmapData = await roadmapRes.json();
 
         if (roadmapData.success) {
           setRoadmap(roadmapData.roadmap);
           const completedSet = new Set<string>(
-            roadmapData.progress.filter((p: any) => p.completed).map((p: any) => p.topicId)
+            (roadmapData.progress || []).filter((p: any) => p.completed).map((p: any) => p.topicId)
           );
           setCompletedTopicIds(completedSet);
         }
+      } else {
+        router.push('/login');
+        return;
       }
     } catch {
-      // ignore
+      router.push('/login');
     } finally {
       setIsLoading(false);
     }
@@ -58,7 +70,8 @@ export default function RoadmapPage() {
     try {
       const res = await fetch('/api/progress/toggle', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({
           topicId,
           sectionId,
@@ -89,7 +102,8 @@ export default function RoadmapPage() {
     try {
       const res = await fetch('/api/profile/switch-role', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({ targetRole: newRole }),
       });
       const data = await res.json();

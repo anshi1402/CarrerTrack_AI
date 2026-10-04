@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { User, UserNotification } from '@/types';
 import ThemeToggle from './ThemeToggle';
+import { getAuthHeaders, removeAuthToken } from '@/lib/client-auth';
 
 interface NavbarProps {
   user?: User | null;
@@ -38,7 +39,10 @@ export default function Navbar({ user, onOpenRoleSwitcher }: NavbarProps) {
 
   const fetchNotifications = async () => {
     try {
-      const res = await fetch('/api/notifications');
+      const res = await fetch('/api/notifications', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const data = await res.json();
       if (data.success) {
         setNotifications(data.notifications || []);
@@ -51,7 +55,11 @@ export default function Navbar({ user, onOpenRoleSwitcher }: NavbarProps) {
 
   const markAllRead = async () => {
     try {
-      const res = await fetch('/api/notifications/mark-read', { method: 'POST' });
+      const res = await fetch('/api/notifications/mark-read', {
+        method: 'POST',
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const data = await res.json();
       if (data.success) {
         setNotifications(data.notifications || []);
@@ -63,7 +71,16 @@ export default function Navbar({ user, onOpenRoleSwitcher }: NavbarProps) {
   };
 
   const handleLogout = async () => {
-    await fetch('/api/auth/logout', { method: 'POST' });
+    try {
+      await fetch('/api/auth/logout', {
+        method: 'POST',
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
+    } catch {
+      // ignore
+    }
+    removeAuthToken();
     router.push('/login');
     router.refresh();
   };

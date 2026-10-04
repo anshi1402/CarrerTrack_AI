@@ -5,7 +5,7 @@ import { triggerStreakRiskNotification } from '@/lib/notifications';
 
 export async function POST(request: NextRequest) {
   try {
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -14,9 +14,9 @@ export async function POST(request: NextRequest) {
     const { type } = body;
 
     if (type === 'streak_risk') {
-      triggerStreakRiskNotification(user.id);
+      await triggerStreakRiskNotification(user.id);
     } else {
-      dbRepo.addNotification({
+      await dbRepo.addNotification({
         id: 'notif-' + Date.now(),
         userId: user.id,
         type: 'daily_reminder',
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    const notifications = dbRepo.getNotifications(user.id);
+    const notifications = await dbRepo.getNotifications(user.id);
     const unreadCount = notifications.filter((n) => !n.read).length;
 
     return NextResponse.json({

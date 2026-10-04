@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
 import {
   Map,
   Search,
@@ -13,10 +12,13 @@ import Sidebar from '@/components/Sidebar';
 import MobileNav from '@/components/MobileNav';
 import RoadmapSectionCard from '@/components/RoadmapSectionCard';
 import RoleSwitcherModal from '@/components/RoleSwitcherModal';
+import { useRouter, useParams } from 'next/navigation';
 import { User, Roadmap, TargetRole } from '@/types';
 import { fireCelebrationConfetti } from '@/components/ConfettiTrigger';
+import { getAuthHeaders } from '@/lib/client-auth';
 
 export default function RoleRoadmapPage() {
+  const router = useRouter();
   const params = useParams();
   const roleSlug = params.role as string;
 
@@ -34,24 +36,33 @@ export default function RoleRoadmapPage() {
 
   const fetchData = async () => {
     try {
-      const userRes = await fetch('/api/auth/me');
+      const userRes = await fetch('/api/auth/me', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const userData = await userRes.json();
       if (userData.success && userData.user) {
         setUser(userData.user);
+      } else {
+        router.push('/login');
+        return;
       }
 
-      const roadmapRes = await fetch(`/api/roadmaps/${encodeURIComponent(roleSlug)}`);
+      const roadmapRes = await fetch(`/api/roadmaps/${encodeURIComponent(roleSlug)}`, {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const roadmapData = await roadmapRes.json();
 
       if (roadmapData.success) {
         setRoadmap(roadmapData.roadmap);
         const completedSet = new Set<string>(
-          roadmapData.progress.filter((p: any) => p.completed).map((p: any) => p.topicId)
+          (roadmapData.progress || []).filter((p: any) => p.completed).map((p: any) => p.topicId)
         );
         setCompletedTopicIds(completedSet);
       }
     } catch {
-      // ignore
+      router.push('/login');
     } finally {
       setIsLoading(false);
     }
@@ -61,7 +72,8 @@ export default function RoleRoadmapPage() {
     try {
       const res = await fetch('/api/progress/toggle', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({
           topicId,
           sectionId,

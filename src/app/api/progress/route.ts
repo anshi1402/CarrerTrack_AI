@@ -5,7 +5,7 @@ import { TargetRole } from '@/types';
 
 export async function GET(request: NextRequest) {
   try {
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -14,8 +14,8 @@ export async function GET(request: NextRequest) {
     const roleParam = searchParams.get('role') as TargetRole | null;
     const targetRole = roleParam || user.targetRole;
 
-    const progress = dbRepo.getUserProgress(user.id, targetRole);
-    const roadmap = dbRepo.getRoadmapByRole(targetRole);
+    const progress = await dbRepo.getUserProgress(user.id, targetRole);
+    const roadmap = await dbRepo.getRoadmapByRole(targetRole);
 
     const totalTopics = roadmap?.totalTopicsCount || 1;
     const completedCount = progress.filter((p) => p.completed).length;

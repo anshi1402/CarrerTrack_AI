@@ -1,21 +1,21 @@
 import { dbRepo } from './db';
-import { UserNotification } from '@/types';
 
-export function checkAndGenerateDailyReminders(userId: string) {
-  const user = dbRepo.getUserById(userId);
+export async function checkAndGenerateDailyReminders(userId: string): Promise<void> {
+  const user = await dbRepo.getUserById(userId);
   if (!user || !user.notificationPreferences?.dailyGoalReminder) return;
 
   const today = new Date().toISOString().split('T')[0];
-  const goal = dbRepo.getDailyGoal(userId, today);
+  const goal = await dbRepo.getDailyGoal(userId, today);
 
   if (!goal.completed && goal.tasks.length > 0) {
     const remaining = goal.tasks.filter((t) => !t.completed).length;
-    const existingNotif = dbRepo.getNotifications(userId).find(
+    const notifs = await dbRepo.getNotifications(userId);
+    const existingNotif = notifs.find(
       (n) => n.type === 'daily_reminder' && n.createdAt.startsWith(today)
     );
 
     if (!existingNotif && remaining > 0) {
-      dbRepo.addNotification({
+      await dbRepo.addNotification({
         id: 'notif-' + Date.now(),
         userId,
         type: 'daily_reminder',
@@ -28,11 +28,11 @@ export function checkAndGenerateDailyReminders(userId: string) {
   }
 }
 
-export function triggerStreakRiskNotification(userId: string) {
-  const user = dbRepo.getUserById(userId);
+export async function triggerStreakRiskNotification(userId: string): Promise<void> {
+  const user = await dbRepo.getUserById(userId);
   if (!user) return;
 
-  dbRepo.addNotification({
+  await dbRepo.addNotification({
     id: 'notif-' + Date.now(),
     userId,
     type: 'streak_risk',

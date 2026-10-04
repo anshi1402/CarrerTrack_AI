@@ -5,15 +5,15 @@ import { calculatePlacementReadiness } from '@/lib/readiness';
 
 export async function GET(request: NextRequest) {
   try {
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const weeklyActivity = dbRepo.getActivities(user.id);
-    const roadmap = dbRepo.getRoadmapByRole(user.targetRole);
-    const progress = dbRepo.getUserProgress(user.id, user.targetRole);
-    const todayGoal = dbRepo.getDailyGoal(user.id);
+    const weeklyActivity = await dbRepo.getActivities(user.id);
+    const roadmap = await dbRepo.getRoadmapByRole(user.targetRole);
+    const progress = await dbRepo.getUserProgress(user.id, user.targetRole);
+    const todayGoal = await dbRepo.getDailyGoal(user.id);
 
     // Skill-wise progress breakdown
     const skillProgress =

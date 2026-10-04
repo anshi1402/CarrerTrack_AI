@@ -32,7 +32,7 @@ export function verifyToken(token: string): TokenPayload | null {
   }
 }
 
-export function getCurrentUserFromRequest(request: NextRequest): User | null {
+export async function getCurrentUserFromRequest(request: NextRequest): Promise<User | null> {
   try {
     // 1. Check cookies
     const cookieToken = request.cookies.get('careertrack_token')?.value;
@@ -42,18 +42,17 @@ export function getCurrentUserFromRequest(request: NextRequest): User | null {
 
     const token = cookieToken || headerToken;
     if (!token) {
-      // Return default demo user for frictionless local preview if no token
-      return dbRepo.getUserById('demo-user-id') || null;
+      return null;
     }
 
     const payload = verifyToken(token);
     if (!payload?.userId) {
-      return dbRepo.getUserById('demo-user-id') || null;
+      return null;
     }
 
-    const user = dbRepo.getUserById(payload.userId);
-    return user || dbRepo.getUserById('demo-user-id') || null;
+    const user = await dbRepo.getUserById(payload.userId);
+    return user || null;
   } catch {
-    return dbRepo.getUserById('demo-user-id') || null;
+    return null;
   }
 }

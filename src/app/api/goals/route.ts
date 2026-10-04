@@ -5,14 +5,14 @@ import { DailyGoalTask } from '@/types';
 
 export async function GET(request: NextRequest) {
   try {
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
     const { searchParams } = new URL(request.url);
     const dateParam = searchParams.get('date');
-    const goal = dbRepo.getDailyGoal(user.id, dateParam || undefined);
+    const goal = await dbRepo.getDailyGoal(user.id, dateParam || undefined);
 
     return NextResponse.json({ success: true, goal });
   } catch (error: any) {
@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Task title is required' }, { status: 400 });
     }
 
-    const goal = dbRepo.getDailyGoal(user.id);
+    const goal = await dbRepo.getDailyGoal(user.id);
     const newTask: DailyGoalTask = {
       id: 'task-' + Date.now() + '-' + Math.random().toString(36).substr(2, 4),
       title,
@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
     goal.completionPercentage = Math.round((goal.completedTasksCount / goal.totalTasksCount) * 100);
     goal.completed = goal.completedTasksCount >= goal.totalTasksCount;
 
-    dbRepo.saveDailyGoal(goal);
+    await dbRepo.saveDailyGoal(goal);
 
     return NextResponse.json({ success: true, goal, task: newTask });
   } catch (error: any) {

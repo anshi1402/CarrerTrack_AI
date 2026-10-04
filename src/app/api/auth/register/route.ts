@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Name, email, and password are required' }, { status: 400 });
     }
 
-    const existingUser = dbRepo.getUserByEmail(email);
+    const existingUser = await dbRepo.getUserByEmail(email);
     if (existingUser) {
       return NextResponse.json({ error: 'An account with this email already exists' }, { status: 400 });
     }
@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
       createdAt: new Date().toISOString(),
     };
 
-    dbRepo.createUser(newUser);
+    await dbRepo.createUser(newUser);
 
     const token = signToken({ userId: newUser.id, email: newUser.email });
     const { password: _, ...safeUser } = newUser;

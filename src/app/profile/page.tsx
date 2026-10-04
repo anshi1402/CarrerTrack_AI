@@ -15,9 +15,12 @@ import Sidebar from '@/components/Sidebar';
 import MobileNav from '@/components/MobileNav';
 import AchievementBadgeCard from '@/components/AchievementBadgeCard';
 import RoleSwitcherModal from '@/components/RoleSwitcherModal';
+import { useRouter } from 'next/navigation';
 import { User, AchievementBadge, PlacementReadinessReport, TargetRole } from '@/types';
+import { getAuthHeaders } from '@/lib/client-auth';
 
 export default function ProfilePage() {
+  const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
   const [achievements, setAchievements] = useState<AchievementBadge[]>([]);
   const [readinessReport, setReadinessReport] = useState<PlacementReadinessReport | null>(null);
@@ -32,17 +35,23 @@ export default function ProfilePage() {
 
   const fetchProfileData = async () => {
     try {
-      const res = await fetch('/api/profile');
+      const res = await fetch('/api/profile', {
+        headers: getAuthHeaders(),
+        credentials: 'include',
+      });
       const data = await res.json();
-      if (data.success) {
+      if (data.success && data.user) {
         setUser(data.user);
         setAchievements(data.achievements || []);
         setReadinessReport(data.readinessReport);
         setTotalCompletedTopics(data.totalCompletedTopics || 0);
         setTotalRoadmapTopics(data.totalRoadmapTopics || 0);
+      } else {
+        router.push('/login');
+        return;
       }
     } catch {
-      // ignore
+      router.push('/login');
     } finally {
       setIsLoading(false);
     }
@@ -52,7 +61,8 @@ export default function ProfilePage() {
     try {
       const res = await fetch('/api/profile/switch-role', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getAuthHeaders(),
+        credentials: 'include',
         body: JSON.stringify({ targetRole: newRole }),
       });
       const data = await res.json();

@@ -5,7 +5,7 @@ import { TargetRole, SkillLevel } from '@/types';
 
 export async function POST(request: NextRequest) {
   try {
-    const user = getCurrentUserFromRequest(request);
+    const user = await getCurrentUserFromRequest(request);
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { name, targetRole, skillLevel, dailyGoalTarget, reminderTime } = body;
 
-    const updated = dbRepo.updateUser(user.id, {
+    const updated = await dbRepo.updateUser(user.id, {
       ...(name && { name }),
       targetRole: (targetRole as TargetRole) || user.targetRole,
       skillLevel: (skillLevel as SkillLevel) || user.skillLevel,
@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
       onboardingCompleted: true,
     });
 
-    const roadmap = dbRepo.getRoadmapByRole(updated?.targetRole || 'Frontend Developer');
+    const roadmap = await dbRepo.getRoadmapByRole(updated?.targetRole || 'Frontend Developer');
 
     return NextResponse.json({
       success: true,
