@@ -1,4 +1,12 @@
 import mongoose from 'mongoose';
+import dns from 'dns';
+
+// Fix for Node.js SRV DNS resolution on Windows and certain ISPs
+try {
+  dns.setServers(['8.8.8.8', '8.8.4.4', '1.1.1.1']);
+} catch {
+  // Ignore if not permitted in specific runtime
+}
 
 /**
  * Global cache interface for Mongoose connection in serverless / hot-reload environments.
